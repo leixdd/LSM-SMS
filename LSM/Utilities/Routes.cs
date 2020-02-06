@@ -29,6 +29,7 @@ namespace LSM.Utilities
         public static String R_ITEMS_LIST = SERVERHOST + "/api/items/";
         public static String R_ITEMS_DELETE = SERVERHOST + "/api/items/remove/";
 
-
+        //Customers
+        public static String R_CUSTOMERS = SERVERHOST + "/api/customers";
     }
 }

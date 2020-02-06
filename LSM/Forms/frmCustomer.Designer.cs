@@ -28,20 +28,42 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new ns1.BunifuCards();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new ns1.BunifuCards();
+            this.btnTransaction = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.lstCustomers = new System.Windows.Forms.ListBox();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.lblDesc = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnTransaction = new System.Windows.Forms.Button();
+            this.txtCompanyAddress = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtEmailAddress = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtContactNumber = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtCompanyName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCustomerName = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.bunifuCards3 = new ns1.BunifuCards();
+            this.bunifuSeparator3 = new ns1.BunifuSeparator();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.dgvDeliveryItems = new System.Windows.Forms.DataGridView();
+            this.btnItem = new System.Windows.Forms.Button();
             this.bunifuCards1.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
+            this.bunifuCards3.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuCards1
@@ -53,6 +75,17 @@
             this.bunifuCards1.BorderRadius = 5;
             this.bunifuCards1.BottomSahddow = true;
             this.bunifuCards1.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards1.Controls.Add(this.bunifuCards3);
+            this.bunifuCards1.Controls.Add(this.txtCompanyAddress);
+            this.bunifuCards1.Controls.Add(this.label4);
+            this.bunifuCards1.Controls.Add(this.txtEmailAddress);
+            this.bunifuCards1.Controls.Add(this.label5);
+            this.bunifuCards1.Controls.Add(this.txtContactNumber);
+            this.bunifuCards1.Controls.Add(this.label6);
+            this.bunifuCards1.Controls.Add(this.txtCompanyName);
+            this.bunifuCards1.Controls.Add(this.label7);
+            this.bunifuCards1.Controls.Add(this.txtCustomerName);
+            this.bunifuCards1.Controls.Add(this.label11);
             this.bunifuCards1.Controls.Add(this.bunifuSeparator1);
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.Controls.Add(this.label2);
@@ -61,7 +94,7 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(747, 564);
+            this.bunifuCards1.Size = new System.Drawing.Size(776, 616);
             this.bunifuCards1.TabIndex = 29;
             // 
             // bunifuSeparator1
@@ -93,7 +126,7 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(8, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(296, 32);
+            this.label2.Size = new System.Drawing.Size(320, 33);
             this.label2.TabIndex = 3;
             this.label2.Text = "Customer Information";
             // 
@@ -117,8 +150,40 @@
             this.bunifuCards2.Name = "bunifuCards2";
             this.bunifuCards2.RightSahddow = true;
             this.bunifuCards2.ShadowDepth = 20;
-            this.bunifuCards2.Size = new System.Drawing.Size(400, 564);
+            this.bunifuCards2.Size = new System.Drawing.Size(400, 616);
             this.bunifuCards2.TabIndex = 30;
+            // 
+            // btnTransaction
+            // 
+            this.btnTransaction.BackColor = System.Drawing.Color.Green;
+            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTransaction.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTransaction.ForeColor = System.Drawing.Color.White;
+            this.btnTransaction.Location = new System.Drawing.Point(244, 13);
+            this.btnTransaction.Name = "btnTransaction";
+            this.btnTransaction.Size = new System.Drawing.Size(144, 43);
+            this.btnTransaction.TabIndex = 25;
+            this.btnTransaction.Text = "Add Customer";
+            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.btnTransaction.Click += new System.EventHandler(this.btnTransaction_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(87, 79);
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(301, 25);
+            this.txtSearch.TabIndex = 29;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(13, 83);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 20);
+            this.label3.TabIndex = 30;
+            this.label3.Text = "Search :";
             // 
             // lstCustomers
             // 
@@ -130,7 +195,7 @@
             this.lstCustomers.ItemHeight = 17;
             this.lstCustomers.Location = new System.Drawing.Point(15, 113);
             this.lstCustomers.Name = "lstCustomers";
-            this.lstCustomers.Size = new System.Drawing.Size(373, 429);
+            this.lstCustomers.Size = new System.Drawing.Size(373, 480);
             this.lstCustomers.TabIndex = 25;
             // 
             // bunifuSeparator2
@@ -162,46 +227,216 @@
             this.label8.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(6, 11);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(223, 32);
+            this.label8.Size = new System.Drawing.Size(232, 33);
             this.label8.TabIndex = 3;
             this.label8.Text = "CUSTOMER LISTS";
             // 
-            // txtSearch
+            // txtCompanyAddress
             // 
-            this.txtSearch.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(87, 79);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(301, 25);
-            this.txtSearch.TabIndex = 29;
+            this.txtCompanyAddress.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCompanyAddress.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompanyAddress.Location = new System.Drawing.Point(552, 127);
+            this.txtCompanyAddress.Name = "txtCompanyAddress";
+            this.txtCompanyAddress.Size = new System.Drawing.Size(206, 24);
+            this.txtCompanyAddress.TabIndex = 47;
             // 
-            // label3
+            // label4
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(13, 83);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 18);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Search :";
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(412, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(143, 19);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Company Address: ";
             // 
-            // btnTransaction
+            // txtEmailAddress
             // 
-            this.btnTransaction.BackColor = System.Drawing.Color.Green;
-            this.btnTransaction.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTransaction.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTransaction.ForeColor = System.Drawing.Color.White;
-            this.btnTransaction.Location = new System.Drawing.Point(235, 15);
-            this.btnTransaction.Name = "btnTransaction";
-            this.btnTransaction.Size = new System.Drawing.Size(153, 43);
-            this.btnTransaction.TabIndex = 25;
-            this.btnTransaction.Text = "Add Customer";
-            this.btnTransaction.UseVisualStyleBackColor = false;
+            this.txtEmailAddress.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailAddress.Location = new System.Drawing.Point(162, 173);
+            this.txtEmailAddress.Name = "txtEmailAddress";
+            this.txtEmailAddress.Size = new System.Drawing.Size(244, 24);
+            this.txtEmailAddress.TabIndex = 45;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 176);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(110, 19);
+            this.label5.TabIndex = 46;
+            this.label5.Text = "Email Address :";
+            // 
+            // txtContactNumber
+            // 
+            this.txtContactNumber.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContactNumber.Location = new System.Drawing.Point(162, 128);
+            this.txtContactNumber.Name = "txtContactNumber";
+            this.txtContactNumber.Size = new System.Drawing.Size(244, 24);
+            this.txtContactNumber.TabIndex = 43;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(12, 130);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(134, 19);
+            this.label6.TabIndex = 44;
+            this.label6.Text = "Contact Number: ";
+            // 
+            // txtCompanyName
+            // 
+            this.txtCompanyName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCompanyName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCompanyName.Location = new System.Drawing.Point(551, 83);
+            this.txtCompanyName.Name = "txtCompanyName";
+            this.txtCompanyName.Size = new System.Drawing.Size(206, 24);
+            this.txtCompanyName.TabIndex = 41;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(412, 86);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(133, 19);
+            this.label7.TabIndex = 42;
+            this.label7.Text = "Company Name: ";
+            // 
+            // txtCustomerName
+            // 
+            this.txtCustomerName.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCustomerName.Location = new System.Drawing.Point(162, 85);
+            this.txtCustomerName.Name = "txtCustomerName";
+            this.txtCustomerName.Size = new System.Drawing.Size(244, 24);
+            this.txtCustomerName.TabIndex = 39;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(12, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(128, 19);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "Customer Name: ";
+            // 
+            // bunifuCards3
+            // 
+            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCards3.BackColor = System.Drawing.Color.White;
+            this.bunifuCards3.BorderRadius = 5;
+            this.bunifuCards3.BottomSahddow = true;
+            this.bunifuCards3.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards3.Controls.Add(this.btnItem);
+            this.bunifuCards3.Controls.Add(this.groupBox3);
+            this.bunifuCards3.Controls.Add(this.bunifuSeparator3);
+            this.bunifuCards3.Controls.Add(this.label10);
+            this.bunifuCards3.Controls.Add(this.label12);
+            this.bunifuCards3.LeftSahddow = false;
+            this.bunifuCards3.Location = new System.Drawing.Point(15, 214);
+            this.bunifuCards3.Name = "bunifuCards3";
+            this.bunifuCards3.RightSahddow = true;
+            this.bunifuCards3.ShadowDepth = 20;
+            this.bunifuCards3.Size = new System.Drawing.Size(743, 388);
+            this.bunifuCards3.TabIndex = 49;
+            // 
+            // bunifuSeparator3
+            // 
+            this.bunifuSeparator3.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator3.LineThickness = 3;
+            this.bunifuSeparator3.Location = new System.Drawing.Point(15, 61);
+            this.bunifuSeparator3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuSeparator3.Name = "bunifuSeparator3";
+            this.bunifuSeparator3.Size = new System.Drawing.Size(373, 10);
+            this.bunifuSeparator3.TabIndex = 24;
+            this.bunifuSeparator3.Transparency = 255;
+            this.bunifuSeparator3.Vertical = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(11, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(205, 19);
+            this.label10.TabIndex = 4;
+            this.label10.Text = "Item Setup for the Customers";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(8, 10);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(167, 33);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Item Setup";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.dgvDeliveryItems);
+            this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(14, 78);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(716, 301);
+            this.groupBox3.TabIndex = 30;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Customer Item List";
+            // 
+            // dgvDeliveryItems
+            // 
+            this.dgvDeliveryItems.AllowUserToAddRows = false;
+            this.dgvDeliveryItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDeliveryItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeliveryItems.DefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
+            this.dgvDeliveryItems.Name = "dgvDeliveryItems";
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDeliveryItems.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.dgvDeliveryItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDeliveryItems.Size = new System.Drawing.Size(710, 280);
+            this.dgvDeliveryItems.TabIndex = 10;
+            // 
+            // btnItem
+            // 
+            this.btnItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnItem.BackColor = System.Drawing.Color.Green;
+            this.btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItem.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItem.ForeColor = System.Drawing.Color.White;
+            this.btnItem.Location = new System.Drawing.Point(583, 18);
+            this.btnItem.Name = "btnItem";
+            this.btnItem.Size = new System.Drawing.Size(144, 31);
+            this.btnItem.TabIndex = 31;
+            this.btnItem.Text = "Add Item";
+            this.btnItem.UseVisualStyleBackColor = false;
+            this.btnItem.Click += new System.EventHandler(this.button1_Click);
             // 
             // frmCustomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1183, 588);
+            this.ClientSize = new System.Drawing.Size(1212, 640);
             this.Controls.Add(this.bunifuCards2);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -211,6 +446,10 @@
             this.bunifuCards1.PerformLayout();
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
+            this.bunifuCards3.ResumeLayout(false);
+            this.bunifuCards3.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -229,5 +468,22 @@
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnTransaction;
+        private System.Windows.Forms.TextBox txtCompanyAddress;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtEmailAddress;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtContactNumber;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtCompanyName;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtCustomerName;
+        private System.Windows.Forms.Label label11;
+        private ns1.BunifuCards bunifuCards3;
+        private ns1.BunifuSeparator bunifuSeparator3;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.DataGridView dgvDeliveryItems;
+        private System.Windows.Forms.Button btnItem;
     }
 }

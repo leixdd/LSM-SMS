@@ -175,5 +175,10 @@ namespace LSM.Forms
         {
 
         }
+
+        private void txtItem_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

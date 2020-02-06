@@ -78,6 +78,12 @@
     <Compile Include="Forms\frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmAddItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmAddItemSetup.Designer.cs">
+      <DependentUpon>frmAddItemSetup.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,7 @@
     <Compile Include="Models\BaseTable.cs" />
     <Compile Include="Models\Cheque.cs" />
     <Compile Include="Models\ChequeDGV.cs" />
+    <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DGV_MODEL.cs" />
     <Compile Include="Models\DR.cs" />
     <Compile Include="Models\GlobalSettings.cs" />
@@ -240,6 +247,9 @@
     <Compile Include="Utilities\Routes.cs" />
     <EmbeddedResource Include="Forms\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmAddItemSetup.resx">
+      <DependentUpon>frmAddItemSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
