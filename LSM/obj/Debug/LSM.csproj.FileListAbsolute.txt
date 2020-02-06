@@ -195,3 +195,4 @@ F:\_lsm\LSM\obj\Debug\LSM.csproj.CoreCompileInputs.cache
 F:\_lsm\LSM\obj\Debug\LSM.csproj.CopyComplete
 F:\_lsm\LSM\obj\Debug\LSM.exe
 F:\_lsm\LSM\obj\Debug\LSM.pdb
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmCustomer.resources

@@ -122,6 +122,7 @@ namespace LSM
         private void button4_Click(object sender, EventArgs e)
         {
 
+            mdi_module_load(new Forms.frmCustomer(), (Button)sender);
         }
 
         private void btnItemList_Click(object sender, EventArgs e)
