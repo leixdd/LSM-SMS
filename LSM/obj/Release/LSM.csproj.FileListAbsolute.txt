@@ -1,0 +1,90 @@
+D:\Project\lsm-sms\LSM\bin\Release\LSM.exe.config
+D:\Project\lsm-sms\LSM\bin\Release\LSM.exe
+D:\Project\lsm-sms\LSM\bin\Release\LSM.pdb
+D:\Project\lsm-sms\LSM\bin\Release\Bunifu_UI_v1.52.dll
+D:\Project\lsm-sms\LSM\bin\Release\MaterialSkin.dll
+D:\Project\lsm-sms\LSM\bin\Release\MetroFramework.dll
+D:\Project\lsm-sms\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache
+D:\Project\lsm-sms\LSM\obj\Release\LSM.frmLogin.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.Customer.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.dashboard.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.DeliveryRec.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.frmMain.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.Properties.Resources.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.Sales.resources
+D:\Project\lsm-sms\LSM\obj\Release\LSM.csproj.GenerateResource.Cache
+D:\Project\lsm-sms\LSM\obj\Release\LSM.exe
+D:\Project\lsm-sms\LSM\obj\Release\LSM.pdb
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\LSM.exe.config
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.exe
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.pdb
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmDashboard.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmDR.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmError.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmRPT.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSales.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSetDR.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSuccess.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmViewCheck.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmWebRes.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.MOP.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.frmLogin.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.frmMain_Screen.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Customer.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.dashboard.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.DeliveryRec.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.frmMain.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Properties.Resources.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.User.ErrorList.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.User.FormLoader.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.csproj.GenerateResource.Cache
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\cfg.ini
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\LSM.exe
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\LSM.pdb
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\Bunifu_UI_v1.52.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\INIFileParser.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\MaterialSkin.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\MetroFramework.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\Newtonsoft.Json.dll
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\INIFileParser.xml
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Release\Newtonsoft.Json.xml
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmItemList.resources
+G:\Web Projects\lsm-sms\LSM\bin\Release\LSM.exe.config
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.exe
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.pdb
+G:\Web Projects\lsm-sms\LSM\bin\Release\cfg.ini
+G:\Web Projects\lsm-sms\LSM\bin\Release\LSM.exe
+G:\Web Projects\lsm-sms\LSM\bin\Release\LSM.pdb
+G:\Web Projects\lsm-sms\LSM\bin\Release\Bunifu_UI_v1.52.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\INIFileParser.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\MaterialSkin.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\MetroFramework.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\Newtonsoft.Json.dll
+G:\Web Projects\lsm-sms\LSM\bin\Release\INIFileParser.xml
+G:\Web Projects\lsm-sms\LSM\bin\Release\Newtonsoft.Json.xml
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmDashboard.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmDR.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmError.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmItemList.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmRPT.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSales.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSearchItem.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSetDR.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmSuccess.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmViewCheck.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.frmWebRes.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Forms.MOP.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.frmLogin.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.frmMain_Screen.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Customer.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.dashboard.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.DeliveryRec.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.frmMain.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Properties.Resources.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.User.ErrorList.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.User.FormLoader.resources
+G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.csproj.GenerateResource.Cache

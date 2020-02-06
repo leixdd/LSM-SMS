@@ -1,0 +1,197 @@
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\bin\Debug\LSM.exe.config
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\bin\Debug\LSM.exe
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\bin\Debug\LSM.pdb
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.Properties.Resources.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.csproj.GenerateResource.Cache
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.exe
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.pdb
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.dashboard.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.DeliveryRec.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.Customer.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.Sales.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.frmMain.resources
+c:\users\desktopkor\documents\visual studio 2012\Projects\LSM\LSM\obj\Debug\LSM.frmLogin.resources
+C:\Users\DesktopKOR\Documents\Visual Studio 2012\Projects\LSM\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
+D:\Project\lsm-sms\LSM\bin\Debug\LSM.exe.config
+D:\Project\lsm-sms\LSM\obj\Debug\LSM.exe
+D:\Project\lsm-sms\LSM\obj\Debug\LSM.pdb
+F:\Development Files\lsm-sms\LSM\bin\Debug\LSM.exe.config
+F:\Development Files\lsm-sms\LSM\bin\Debug\LSM.exe
+F:\Development Files\lsm-sms\LSM\bin\Debug\LSM.pdb
+F:\Development Files\lsm-sms\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Customer.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.dashboard.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.DeliveryRec.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.frmMain.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Properties.Resources.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.csproj.GenerateResource.cache
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.csproj.CoreCompileInputs.cache
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.csproj.CopyComplete
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.exe
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.pdb
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.frmMain_Screen.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDR.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSetDR.resources
+F:\Development Files\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.dll
+F:\Development Files\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.xml
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.frmLogin.resources
+F:\Development Files\lsm-sms\LSM\bin\Debug\INIFileParser.dll
+F:\Development Files\lsm-sms\LSM\bin\Debug\INIFileParser.xml
+F:\Development Files\lsm-sms\LSM\bin\Debug\cfg.ini
+G:\Web Projects\lsm-sms\LSM\bin\Debug\LSM.exe.config
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.exe
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.pdb
+G:\Web Projects\lsm-sms\LSM\bin\Debug\cfg.ini
+G:\Web Projects\lsm-sms\LSM\bin\Debug\LSM.exe
+G:\Web Projects\lsm-sms\LSM\bin\Debug\LSM.pdb
+G:\Web Projects\lsm-sms\LSM\bin\Debug\INIFileParser.dll
+G:\Web Projects\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.dll
+G:\Web Projects\lsm-sms\LSM\bin\Debug\INIFileParser.xml
+G:\Web Projects\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.xml
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDR.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSetDR.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.frmLogin.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.frmMain_Screen.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Customer.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.dashboard.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.DeliveryRec.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.frmMain.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Properties.Resources.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.csproj.GenerateResource.Cache
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmWebRes.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.User.FormLoader.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.User.ErrorList.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmError.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.csprojAssemblyReference.cache
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSuccess.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmError.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSuccess.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmWebRes.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.User.ErrorList.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.User.FormLoader.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSales.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.MOP.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmRPT.resources
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\bin\Debug\LSM.exe.config
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Debug\LSM.exe
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Debug\LSM.pdb
+C:\Users\DELL\Documents\Visual Studio 2012\Projects\lsm-sms\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
+G:\Web Projects\lsm-sms\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmItemList.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmViewCheck.resources
+G:\Web Projects\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSearchItem.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmItemList.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmRPT.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSales.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSearchItem.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.frmViewCheck.resources
+F:\Development Files\lsm-sms\LSM\obj\Debug\LSM.Forms.MOP.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\LSM.exe.config
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.exe
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.pdb
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\cfg.ini
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\LSM.exe
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\LSM.pdb
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\INIFileParser.dll
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.dll
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\INIFileParser.xml
+G:\Web Projects\lsm-sms\lsm-sms\LSM\bin\Debug\Newtonsoft.Json.xml
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmDR.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmError.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmItemList.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmRPT.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSales.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSearchItem.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSetDR.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmSuccess.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmViewCheck.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.frmWebRes.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Forms.MOP.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.frmLogin.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.frmMain_Screen.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Customer.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.dashboard.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.DeliveryRec.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.frmMain.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.Properties.Resources.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.User.ErrorList.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.User.FormLoader.resources
+G:\Web Projects\lsm-sms\lsm-sms\LSM\obj\Debug\LSM.csproj.GenerateResource.Cache
+D:\_1Up\newup\LSM\bin\Debug\cfg.ini
+D:\_1Up\newup\LSM\bin\Debug\LSM.exe.config
+D:\_1Up\newup\LSM\bin\Debug\LSM.exe
+D:\_1Up\newup\LSM\bin\Debug\LSM.pdb
+D:\_1Up\newup\LSM\bin\Debug\INIFileParser.dll
+D:\_1Up\newup\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\_1Up\newup\LSM\bin\Debug\Newtonsoft.Json.dll
+D:\_1Up\newup\LSM\bin\Debug\INIFileParser.xml
+D:\_1Up\newup\LSM\bin\Debug\Newtonsoft.Json.xml
+D:\_1Up\newup\LSM\obj\Debug\LSM.csprojAssemblyReference.cache
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmDR.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmError.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmItemList.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmRPT.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmSales.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmSearchItem.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmSetDR.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmSuccess.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmViewCheck.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.frmWebRes.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Forms.MOP.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.frmLogin.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.frmMain_Screen.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Customer.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.dashboard.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.DeliveryRec.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.frmMain.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.Properties.Resources.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.User.ErrorList.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.User.FormLoader.resources
+D:\_1Up\newup\LSM\obj\Debug\LSM.csproj.GenerateResource.cache
+D:\_1Up\newup\LSM\obj\Debug\LSM.csproj.CoreCompileInputs.cache
+D:\_1Up\newup\LSM\obj\Debug\LSM.csproj.CopyComplete
+D:\_1Up\newup\LSM\obj\Debug\LSM.exe
+D:\_1Up\newup\LSM\obj\Debug\LSM.pdb
+F:\_lsm\LSM\bin\Debug\cfg.ini
+F:\_lsm\LSM\bin\Debug\LSM.exe.config
+F:\_lsm\LSM\bin\Debug\LSM.exe
+F:\_lsm\LSM\bin\Debug\LSM.pdb
+F:\_lsm\LSM\bin\Debug\INIFileParser.dll
+F:\_lsm\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+F:\_lsm\LSM\bin\Debug\Newtonsoft.Json.dll
+F:\_lsm\LSM\bin\Debug\INIFileParser.xml
+F:\_lsm\LSM\bin\Debug\Newtonsoft.Json.xml
+F:\_lsm\LSM\obj\Debug\LSM.csprojAssemblyReference.cache
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmDR.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmError.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmItemList.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmRPT.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmSales.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmSearchItem.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmSetDR.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmSuccess.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmViewCheck.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmWebRes.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.MOP.resources
+F:\_lsm\LSM\obj\Debug\LSM.frmLogin.resources
+F:\_lsm\LSM\obj\Debug\LSM.frmMain_Screen.resources
+F:\_lsm\LSM\obj\Debug\LSM.Customer.resources
+F:\_lsm\LSM\obj\Debug\LSM.dashboard.resources
+F:\_lsm\LSM\obj\Debug\LSM.DeliveryRec.resources
+F:\_lsm\LSM\obj\Debug\LSM.frmMain.resources
+F:\_lsm\LSM\obj\Debug\LSM.Properties.Resources.resources
+F:\_lsm\LSM\obj\Debug\LSM.User.ErrorList.resources
+F:\_lsm\LSM\obj\Debug\LSM.User.FormLoader.resources
+F:\_lsm\LSM\obj\Debug\LSM.csproj.GenerateResource.cache
+F:\_lsm\LSM\obj\Debug\LSM.csproj.CoreCompileInputs.cache
+F:\_lsm\LSM\obj\Debug\LSM.csproj.CopyComplete
+F:\_lsm\LSM\obj\Debug\LSM.exe
+F:\_lsm\LSM\obj\Debug\LSM.pdb
