@@ -195,7 +195,6 @@ F:\_lsm\LSM\obj\Debug\LSM.csproj.CoreCompileInputs.cache
 F:\_lsm\LSM\obj\Debug\LSM.csproj.CopyComplete
 F:\_lsm\LSM\obj\Debug\LSM.exe
 F:\_lsm\LSM\obj\Debug\LSM.pdb
-F:\_lsm\LSM\obj\Debug\LSM.Forms.frmCustomer.resources
 G:\LSM\LSM-SMS\LSM\bin\Debug\LSM.exe.config
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.exe
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.pdb
@@ -233,3 +232,6 @@ G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.User.ErrorList.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.User.FormLoader.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csproj.GenerateResource.Cache
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmAddItemSetup.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmAddCustomer.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmAddItemSetup.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmCustomer.resources

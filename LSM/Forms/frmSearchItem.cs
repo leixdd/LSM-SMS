@@ -50,6 +50,7 @@ namespace LSM.Forms
             dgvDeliveryItems.DataSource = new BindingSource(TABLE_MODEL.get_model, null);
             TABLE_MODEL.get_model.ResetBindings();
         }
+
         protected void resetDGV()
         {
             this.dgvDeliveryItems.Columns["ID"].Visible = false;

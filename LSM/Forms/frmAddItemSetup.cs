@@ -1,9 +1,12 @@
-﻿using System;
+﻿using LSM.Utilities;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -12,9 +15,16 @@ namespace LSM.Forms
 {
     public partial class frmAddItemSetup : Form
     {
+        private int customer_id;
+    
         public frmAddItemSetup()
         {
             InitializeComponent();
+        }
+
+        public void setCID(int cid)
+        {
+            this.customer_id = cid;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -60,6 +70,47 @@ namespace LSM.Forms
         {
 
             this.setFP();
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            frmError _error = new frmError();
+
+            var rp_prep = new Models.ItemBind
+            {
+                item_id = Models.GlobalSettings.Selection_Item_ID,
+                customer_id = this.customer_id,
+                discount = (Double) numDiscount.Value,
+                selling_price = (Double) numSP.Value
+            };
+
+            HttpServer.Post(Routes.R_CUSTOMERS_BIND_ITEM, new StringContent(JsonConvert.SerializeObject(rp_prep), Encoding.UTF8, "application/json"), (passed, results) =>
+            {
+                if (passed)
+                {
+
+                    if (!bool.Parse(results.success))
+                    {
+                        var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                        foreach (String control in data_.Keys)
+                        {
+                            _error.errorList1.addError(String.Join(",", data_[control]));
+                        }
+                        _error.Show();
+                        return false;
+                    }
+
+                    frmSuccess success = new frmSuccess();
+                    success.setDesc(results.data.ToString());
+                    success.ShowDialog();
+
+
+
+                    this.Close();
+                }
+                return false;
+            });
+
         }
     }
 }
