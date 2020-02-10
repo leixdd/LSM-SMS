@@ -203,6 +203,7 @@
     <Compile Include="Models\RP.cs" />
     <Compile Include="Models\Selection_Model.cs" />
     <Compile Include="Models\TABLE_CUSTOMER_LIST.cs" />
+    <Compile Include="Models\TABLE_DELIVERIES_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_BIND_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_LIST.cs" />
     <Compile Include="Models\TransactionRPT.cs" />

@@ -20,7 +20,7 @@ namespace LSM.Forms
         protected Models.DGV_MODEL<Models.TABLE_ITEM_BIND_LIST> TABLE_MODEL = new Models.DGV_MODEL<Models.TABLE_ITEM_BIND_LIST>();
 
         protected List<Models.TABLE_ITEM_BIND_LIST> temp_list = new List<Models.TABLE_ITEM_BIND_LIST>();
-
+        
 
         public frmCustomer()
         {

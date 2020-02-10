@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards3 = new ns1.BunifuCards();
             this.btnItem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -42,6 +42,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.bunifuCards1 = new ns1.BunifuCards();
+            this.button1 = new System.Windows.Forms.Button();
             this.dgvChequeList = new System.Windows.Forms.DataGridView();
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.label9 = new System.Windows.Forms.Label();
@@ -51,19 +52,18 @@
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.cashGroup = new ns1.BunifuCards();
-            this.bunifuSeparator4 = new ns1.BunifuSeparator();
-            this.label8 = new System.Windows.Forms.Label();
-            this.dtpDate = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
+            this.txtAmountReceived = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.txtDeliveryAmount = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txtAmountReceived = new System.Windows.Forms.TextBox();
+            this.dtpDueDate = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.bunifuSeparator4 = new ns1.BunifuSeparator();
+            this.label8 = new System.Windows.Forms.Label();
             this.bunifuCards3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBilling)).BeginInit();
@@ -92,7 +92,7 @@
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(748, 264);
+            this.bunifuCards3.Size = new System.Drawing.Size(748, 305);
             this.bunifuCards3.TabIndex = 50;
             // 
             // btnItem
@@ -118,7 +118,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(14, 78);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(721, 177);
+            this.groupBox3.Size = new System.Drawing.Size(721, 218);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Delivery Item List";
@@ -128,22 +128,22 @@
             this.dgvBilling.AllowUserToAddRows = false;
             this.dgvBilling.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBilling.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle31.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle31.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle31.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle31.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle31.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBilling.DefaultCellStyle = dataGridViewCellStyle31;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBilling.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBilling.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBilling.Location = new System.Drawing.Point(3, 18);
             this.dgvBilling.Name = "dgvBilling";
-            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBilling.RowsDefaultCellStyle = dataGridViewCellStyle32;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBilling.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBilling.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBilling.Size = new System.Drawing.Size(715, 156);
+            this.dgvBilling.Size = new System.Drawing.Size(715, 197);
             this.dgvBilling.TabIndex = 10;
             // 
             // bunifuSeparator3
@@ -175,7 +175,7 @@
             this.label12.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(8, 10);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(96, 33);
+            this.label12.Size = new System.Drawing.Size(89, 32);
             this.label12.TabIndex = 3;
             this.label12.Text = "Billing";
             // 
@@ -194,12 +194,26 @@
             this.bunifuCards1.Controls.Add(this.label9);
             this.bunifuCards1.Controls.Add(this.label1);
             this.bunifuCards1.LeftSahddow = false;
-            this.bunifuCards1.Location = new System.Drawing.Point(398, 464);
+            this.bunifuCards1.Location = new System.Drawing.Point(398, 505);
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(748, 228);
+            this.bunifuCards1.Size = new System.Drawing.Size(748, 187);
             this.bunifuCards1.TabIndex = 51;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.Green;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(588, 19);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(144, 31);
+            this.button1.TabIndex = 32;
+            this.button1.Text = "Add New Cheque";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // dgvChequeList
             // 
@@ -209,21 +223,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChequeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChequeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle33.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle33.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle33.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChequeList.DefaultCellStyle = dataGridViewCellStyle33;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChequeList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChequeList.Location = new System.Drawing.Point(12, 78);
             this.dgvChequeList.Name = "dgvChequeList";
-            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvChequeList.RowsDefaultCellStyle = dataGridViewCellStyle34;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvChequeList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvChequeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChequeList.Size = new System.Drawing.Size(721, 135);
+            this.dgvChequeList.Size = new System.Drawing.Size(721, 94);
             this.dgvChequeList.TabIndex = 25;
             // 
             // bunifuSeparator1
@@ -255,7 +269,7 @@
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(6, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(179, 33);
+            this.label1.Size = new System.Drawing.Size(166, 32);
             this.label1.TabIndex = 3;
             this.label1.Text = "Cheque List";
             // 
@@ -287,19 +301,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDeliveries.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle35.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle35.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle35.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle35.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle35.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDeliveries.DefaultCellStyle = dataGridViewCellStyle35;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeliveries.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDeliveries.Location = new System.Drawing.Point(12, 78);
             this.dgvDeliveries.Name = "dgvDeliveries";
-            dataGridViewCellStyle36.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle36.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDeliveries.RowsDefaultCellStyle = dataGridViewCellStyle36;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDeliveries.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDeliveries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveries.Size = new System.Drawing.Size(353, 553);
             this.dgvDeliveries.TabIndex = 25;
@@ -333,23 +347,9 @@
             this.label3.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(6, 11);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(152, 33);
+            this.label3.Size = new System.Drawing.Size(139, 32);
             this.label3.TabIndex = 3;
             this.label3.Text = "Deliveries";
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Green;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(588, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(144, 31);
-            this.button1.TabIndex = 32;
-            this.button1.Text = "Add New Cheque";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
@@ -391,48 +391,43 @@
             this.cashGroup.Size = new System.Drawing.Size(748, 142);
             this.cashGroup.TabIndex = 53;
             // 
-            // bunifuSeparator4
+            // txtAmountReceived
             // 
-            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator4.LineThickness = 3;
-            this.bunifuSeparator4.Location = new System.Drawing.Point(15, 48);
-            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bunifuSeparator4.Name = "bunifuSeparator4";
-            this.bunifuSeparator4.Size = new System.Drawing.Size(373, 10);
-            this.bunifuSeparator4.TabIndex = 24;
-            this.bunifuSeparator4.Transparency = 255;
-            this.bunifuSeparator4.Vertical = false;
+            this.txtAmountReceived.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAmountReceived.Location = new System.Drawing.Point(541, 99);
+            this.txtAmountReceived.Name = "txtAmountReceived";
+            this.txtAmountReceived.ReadOnly = true;
+            this.txtAmountReceived.Size = new System.Drawing.Size(191, 24);
+            this.txtAmountReceived.TabIndex = 50;
             // 
-            // label8
+            // label7
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(8, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(300, 33);
-            this.label8.TabIndex = 3;
-            this.label8.Text = "Delivery Information";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(394, 102);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(141, 19);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Amount Received :";
             // 
-            // dtpDate
+            // txtDeliveryAmount
             // 
-            this.dtpDate.Enabled = false;
-            this.dtpDate.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpDate.Location = new System.Drawing.Point(128, 63);
-            this.dtpDate.Name = "dtpDate";
-            this.dtpDate.Size = new System.Drawing.Size(260, 24);
-            this.dtpDate.TabIndex = 26;
-            this.dtpDate.Value = new System.DateTime(2020, 2, 10, 7, 57, 59, 0);
+            this.txtDeliveryAmount.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeliveryAmount.Location = new System.Drawing.Point(144, 99);
+            this.txtDeliveryAmount.Name = "txtDeliveryAmount";
+            this.txtDeliveryAmount.ReadOnly = true;
+            this.txtDeliveryAmount.Size = new System.Drawing.Size(244, 24);
+            this.txtDeliveryAmount.TabIndex = 47;
             // 
-            // label5
+            // label6
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(14, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 19);
-            this.label5.TabIndex = 25;
-            this.label5.Text = "Delivery Date :";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(14, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(129, 19);
+            this.label6.TabIndex = 48;
+            this.label6.Text = "Delivery Amount :";
             // 
             // dtpDueDate
             // 
@@ -454,43 +449,48 @@
             this.label4.TabIndex = 27;
             this.label4.Text = "Due Date: ";
             // 
-            // txtDeliveryAmount
+            // dtpDate
             // 
-            this.txtDeliveryAmount.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDeliveryAmount.Location = new System.Drawing.Point(144, 99);
-            this.txtDeliveryAmount.Name = "txtDeliveryAmount";
-            this.txtDeliveryAmount.ReadOnly = true;
-            this.txtDeliveryAmount.Size = new System.Drawing.Size(244, 24);
-            this.txtDeliveryAmount.TabIndex = 47;
+            this.dtpDate.Enabled = false;
+            this.dtpDate.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDate.Location = new System.Drawing.Point(128, 63);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(260, 24);
+            this.dtpDate.TabIndex = 26;
+            this.dtpDate.Value = new System.DateTime(2020, 2, 10, 7, 57, 59, 0);
             // 
-            // label6
+            // label5
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(14, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(129, 19);
-            this.label6.TabIndex = 48;
-            this.label6.Text = "Delivery Amount :";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(14, 64);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(109, 19);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "Delivery Date :";
             // 
-            // label7
+            // bunifuSeparator4
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(394, 102);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(141, 19);
-            this.label7.TabIndex = 49;
-            this.label7.Text = "Amount Received :";
+            this.bunifuSeparator4.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator4.LineThickness = 3;
+            this.bunifuSeparator4.Location = new System.Drawing.Point(15, 48);
+            this.bunifuSeparator4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuSeparator4.Name = "bunifuSeparator4";
+            this.bunifuSeparator4.Size = new System.Drawing.Size(373, 10);
+            this.bunifuSeparator4.TabIndex = 24;
+            this.bunifuSeparator4.Transparency = 255;
+            this.bunifuSeparator4.Vertical = false;
             // 
-            // txtAmountReceived
+            // label8
             // 
-            this.txtAmountReceived.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAmountReceived.Location = new System.Drawing.Point(541, 99);
-            this.txtAmountReceived.Name = "txtAmountReceived";
-            this.txtAmountReceived.ReadOnly = true;
-            this.txtAmountReceived.Size = new System.Drawing.Size(191, 24);
-            this.txtAmountReceived.TabIndex = 50;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(8, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(276, 32);
+            this.label8.TabIndex = 3;
+            this.label8.Text = "Delivery Information";
             // 
             // frmTransactions
             // 
