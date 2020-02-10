@@ -65,7 +65,8 @@ namespace LSM
                             user_id = int.Parse(d_res.data.ToString()),
                             Username = txtUserID.Text
                         };
-                        Form frm = new frmMain_Screen();
+                        frmMain_Screen frm = new frmMain_Screen();
+                        Models.GlobalSettings.main_screen = frm;
                         frm.Show();
                         this.Hide();
                     }

@@ -15,7 +15,18 @@ namespace LSM.Models
         public string datetime { get; set; }
         public string terms { get; set; }
         public string tin { get; set; }
+
+        public string datetime_to_be_paid { get; set; }
+
+        public Boolean check_empty { get; set; }
         public string updated_by { get; set; }
         public IList<DR> dr_list { get; set;  }
+
+        public Double total_amount { get; set; }
+
+        public Double amount_received { get; set; }
+
+        public IList<ChequeDGV> cheque { get; set; }
+
     }
 }

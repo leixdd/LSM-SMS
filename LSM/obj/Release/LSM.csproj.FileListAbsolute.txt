@@ -88,3 +88,45 @@ G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.Properties.Resources.resources
 G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.User.ErrorList.resources
 G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.User.FormLoader.resources
 G:\Web Projects\lsm-sms\LSM\obj\Release\LSM.csproj.GenerateResource.Cache
+G:\LSM\LSM-SMS\LSM\bin\Release\LSM.exe.config
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.exe
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.pdb
+G:\LSM\LSM-SMS\LSM\bin\Release\cfg.ini
+G:\LSM\LSM-SMS\LSM\bin\Release\LSM.exe
+G:\LSM\LSM-SMS\LSM\bin\Release\LSM.pdb
+G:\LSM\LSM-SMS\LSM\bin\Release\Bunifu_UI_v1.52.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\INIFileParser.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\MaterialSkin.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\MetroFramework.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\Newtonsoft.Json.dll
+G:\LSM\LSM-SMS\LSM\bin\Release\INIFileParser.xml
+G:\LSM\LSM-SMS\LSM\bin\Release\Newtonsoft.Json.xml
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmAddCustomer.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmAddItemSetup.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmCustomer.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmDashboard.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmDR.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmError.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmItemList.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmRPT.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmSales.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmSearchCutomer.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmSearchItem.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmSetDR.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmSuccess.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmViewCheck.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmWebRes.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.MOP.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.frmLogin.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.frmMain_Screen.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Customer.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.dashboard.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.DeliveryRec.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.frmMain.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Properties.Resources.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.User.ErrorList.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.User.FormLoader.resources
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.csproj.GenerateResource.Cache
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmTransactions.resources

@@ -126,6 +126,12 @@
     <Compile Include="Forms\frmSales.Designer.cs">
       <DependentUpon>frmSales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\frmSearchCutomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmSearchCutomer.Designer.cs">
+      <DependentUpon>frmSearchCutomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\frmSearchItem.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +149,12 @@
     </Compile>
     <Compile Include="Forms\frmSuccess.Designer.cs">
       <DependentUpon>frmSuccess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmTransactions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmTransactions.Designer.cs">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmViewCheck.cs">
       <SubType>Form</SubType>
@@ -190,6 +202,7 @@
     <Compile Include="Models\Report_Templates\SHARED_R.cs" />
     <Compile Include="Models\RP.cs" />
     <Compile Include="Models\Selection_Model.cs" />
+    <Compile Include="Models\TABLE_CUSTOMER_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_BIND_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_LIST.cs" />
     <Compile Include="Models\TransactionRPT.cs" />
@@ -274,6 +287,9 @@
     <EmbeddedResource Include="Forms\frmSales.resx">
       <DependentUpon>frmSales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmSearchCutomer.resx">
+      <DependentUpon>frmSearchCutomer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSearchItem.resx">
       <DependentUpon>frmSearchItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -282,6 +298,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmSuccess.resx">
       <DependentUpon>frmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmTransactions.resx">
+      <DependentUpon>frmTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmViewCheck.resx">
       <DependentUpon>frmViewCheck.cs</DependentUpon>

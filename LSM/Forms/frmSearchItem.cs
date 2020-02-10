@@ -21,12 +21,24 @@ namespace LSM.Forms
 
         private Models.Selection_Model selection_model { get; set; }
 
+        private Boolean useBind = false;
+        private long customer = 0;
+
         protected class JSON_DEF_MODEL
         {
             public long item_id { get; set; }
             public string item_name { get; set; }
             public double item_cost { get; set; }
             public string item_size { get; set; }
+        }
+
+        protected class CUSTOMER_BINDED_ITEMS
+        {
+            public long id;
+            public string item_name;
+            public string item_size;
+            public double selling_price;
+            public double discount;
         }
 
         public frmSearchItem()
@@ -40,6 +52,19 @@ namespace LSM.Forms
         {
             InitializeComponent();
             selection_model = controller_set_text;
+            init();
+        }
+
+        public frmSearchItem(Models.Selection_Model controller_set_text, long customer_id = 0)
+        {
+            InitializeComponent();
+            selection_model = controller_set_text;
+            if (customer_id > 0)
+            {
+                this.useBind = true;
+                this.customer = customer_id;
+            }
+
             init();
         }
 
@@ -106,9 +131,60 @@ namespace LSM.Forms
 
         }
 
+        private void getBinds(long id)
+        {
+            TABLE_MODEL.get_list.Clear();
+
+            HttpServer.Get(Utilities.Routes.R_CUSTOMERS_BIND_ITEM_GET + id.ToString(), (passed, results) =>
+            {
+
+                if (passed)
+                {
+
+                    if (bool.Parse(results.success))
+                    {
+                        var rs_object = JsonConvert.DeserializeObject<List<CUSTOMER_BINDED_ITEMS>>(results.data.ToString());
+
+                        foreach (CUSTOMER_BINDED_ITEMS item in rs_object)
+                        {
+                            var model = new Models.TABLE_ITEM_LIST
+                            {
+                                ID = item.id,
+                                Name = item.item_name,
+                                Size = item.item_size,
+                                Cost = (item.selling_price - (item.selling_price * (item.discount / 100))),
+                            };
+
+                            TABLE_MODEL.get_list.Add(model);
+                            temp_list.Add(model);
+
+                        }
+
+                        TABLE_MODEL.get_model.ResetBindings();
+
+                        resetDGV();
+
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                return false;
+            });
+        }
+  
+
         private void frmSearchItem_Load(object sender, EventArgs e)
         {
-            this.generate_data();
+            if (!this.useBind)
+            {
+                this.generate_data();
+            }
+            else
+            {
+                this.getBinds(customer);
+            }
         }
 
         private void frmSearchItem_MouseDown(object sender, MouseEventArgs e)
@@ -169,6 +245,11 @@ namespace LSM.Forms
         private void dgvDeliveryItems_Click(object sender, EventArgs e)
         {
             selection();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

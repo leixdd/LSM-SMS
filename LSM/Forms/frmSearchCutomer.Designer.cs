@@ -1,6 +1,6 @@
 ﻿namespace LSM.Forms
 {
-    partial class frmSearchItem
+    partial class frmSearchCutomer
     {
         /// <summary>
         /// Required designer variable.
@@ -59,8 +59,8 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(561, 338);
-            this.bunifuCards1.TabIndex = 0;
+            this.bunifuCards1.Size = new System.Drawing.Size(559, 336);
+            this.bunifuCards1.TabIndex = 1;
             this.bunifuCards1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.bunifuCards1_MouseDown);
             // 
             // btnTransaction
@@ -84,7 +84,7 @@
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(465, 25);
             this.txtSearch.TabIndex = 27;
-            this.txtSearch.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyUp);
+            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // label1
             // 
@@ -105,7 +105,7 @@
             this.groupBox3.Size = new System.Drawing.Size(539, 217);
             this.groupBox3.TabIndex = 29;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Item List";
+            this.groupBox3.Text = "Customer List";
             // 
             // dgvDeliveryItems
             // 
@@ -130,7 +130,6 @@
             this.dgvDeliveryItems.Size = new System.Drawing.Size(533, 196);
             this.dgvDeliveryItems.TabIndex = 10;
             this.dgvDeliveryItems.Click += new System.EventHandler(this.dgvDeliveryItems_Click);
-            this.dgvDeliveryItems.DoubleClick += new System.EventHandler(this.dgvDeliveryItems_DoubleClick);
             // 
             // button1
             // 
@@ -141,24 +140,22 @@
             this.button1.Location = new System.Drawing.Point(238, 284);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 40);
-            this.button1.TabIndex = 31;
+            this.button1.TabIndex = 32;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // frmSearchItem
+            // frmSearchCutomer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 338);
+            this.ClientSize = new System.Drawing.Size(559, 336);
             this.Controls.Add(this.bunifuCards1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmSearchItem";
+            this.Name = "frmSearchCutomer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmSearchItem";
-            this.TopMost = true;
-            this.Load += new System.EventHandler(this.frmSearchItem_Load);
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmSearchItem_MouseDown);
+            this.Text = "frmSearchCutomer";
+            this.Load += new System.EventHandler(this.frmSearchCutomer_Load);
             this.bunifuCards1.ResumeLayout(false);
             this.bunifuCards1.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -170,11 +167,11 @@
         #endregion
 
         private ns1.BunifuCards bunifuCards1;
+        private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dgvDeliveryItems;
-        private System.Windows.Forms.Button btnTransaction;
         private System.Windows.Forms.Button button1;
     }
 }

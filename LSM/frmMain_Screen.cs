@@ -15,31 +15,31 @@ namespace LSM
     {
 
         protected static Color CONSTANT_BG = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-        protected static Button CurrentSelectedModule = null; 
+        protected static Button CurrentSelectedModule = null;
 
-        protected void mdi_module_load(Form frm, object sender)
+        public void mdi_module_load(Form frm, object sender = null)
         {
             frm.MdiParent = this;
             frm.Dock = DockStyle.Fill;
             frm.Show();
 
-            if (CurrentSelectedModule == null)
+            if (sender != null)
             {
-                Button btn = (Button)sender;
-                btn.BackColor = System.Drawing.SystemColors.HotTrack;
-                CurrentSelectedModule = btn;
+                if (CurrentSelectedModule == null)
+                {
+                    Button btn = (Button)sender;
+                    btn.BackColor = System.Drawing.SystemColors.HotTrack;
+                    CurrentSelectedModule = btn;
+                }
+                else
+                {
+                    Button btn = (Button)sender;
+                    btn.BackColor = System.Drawing.SystemColors.HotTrack;
+                    CurrentSelectedModule.BackColor = CONSTANT_BG;
+                    CurrentSelectedModule = btn;
+                    lblModule.Text = btn.Text;
+                }
             }
-            else
-            {
-                Button btn = (Button)sender;
-                btn.BackColor = System.Drawing.SystemColors.HotTrack;
-                CurrentSelectedModule.BackColor = CONSTANT_BG;
-                CurrentSelectedModule = btn;
-                lblModule.Text = btn.Text;
-            }
-
-
-            
         }
 
         public frmMain_Screen()

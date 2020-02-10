@@ -18,6 +18,8 @@ namespace LSM.Models
                 new Models.Report_Templates.RPT_SalesTransactions{ route = Routes.R_SALES_REPORTS_LIST_SALES, RPT_NAME = "Generate Sales List" }
         };
 
+        public static frmMain_Screen main_screen;
+        public static System.Windows.Forms.Form pastScreen;
 
         //Current Selection ID
         public static int Selection_Item_ID = 0; 

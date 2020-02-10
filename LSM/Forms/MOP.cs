@@ -24,6 +24,8 @@ namespace LSM.Forms
        
         protected Models.DGV_MODEL<Models.ChequeDGV> TABLE_MODEL = new Models.DGV_MODEL<Models.ChequeDGV>();
 
+        private Boolean useDR = false;
+        private Models.DR_RPT DR_Transactions;
 
         public MOP()
         {
@@ -39,6 +41,18 @@ namespace LSM.Forms
             total_amount = total_amount_generate(trans.item_list);
             txtTotalAmount.Text = total_amount.ToString("C", CultureInfo.CurrentCulture);
         }
+
+        public void setDRTrans(Models.DR_RPT trans)
+        {
+            this.useDR = true;
+            this.DR_Transactions = trans;
+            total_amount = total_amount_generate(trans.dr_list);
+            txtTotalAmount.Text = total_amount.ToString("C", CultureInfo.CurrentCulture);
+
+            cashGroup.Visible = false;
+        }
+
+        
 
         private void btnClose_Click(object sender, EventArgs e)
         {
@@ -74,40 +88,80 @@ namespace LSM.Forms
                {
 
                    computeTR();
-                   var rp_prep = new Models.RP
-                   {
-                       amount_received = final_amount,
-                       cheque = TABLE_MODEL.get_list,
-                       total_amount = total_amount,
-                       transact_items = transaction_items,
-                       check_empty = (TABLE_MODEL.get_list.Count == 0)
-                   };
 
-
-                   HttpServer.Post(Routes.R_SALES_SAVE, new StringContent(JsonConvert.SerializeObject(rp_prep), Encoding.UTF8, "application/json"), (passed, results) =>
+                   if (this.useDR)
                    {
-                       if (passed)
+                       this.DR_Transactions.cheque = TABLE_MODEL.get_list;
+                       this.DR_Transactions.check_empty = (TABLE_MODEL.get_list.Count == 0);
+                       this.DR_Transactions.amount_received = final_amount;
+                       this.DR_Transactions.total_amount = total_amount;
+
+                       HttpServer.Post(Routes.R_DR_SAVE, new StringContent(JsonConvert.SerializeObject(this.DR_Transactions), Encoding.UTF8, "application/json"), (passed, results) =>
                        {
-
-                           if (!bool.Parse(results.success))
+                           if (passed)
                            {
-                               var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
-                               foreach (String control in data_.Keys)
+
+                               if (!bool.Parse(results.success))
                                {
-                                   _error.errorList1.addError(String.Join(",", data_[control]));
+                                   var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                                   foreach (String control in data_.Keys)
+                                   {
+                                       _error.errorList1.addError(String.Join(",", data_[control]));
+                                   }
+
+                                   _error.Show();
+
+
+                                   return false;
                                }
-                               _error.Show();
-                               return false;
+
+                               frmSuccess success = new frmSuccess();
+                               success.setDesc(results.data.ToString());
+                               success.ShowDialog();
+
+
                            }
-
-                           frmSuccess success = new frmSuccess();
-                           success.setDesc(results.data.ToString());
-                           success.ShowDialog();
+                           return false;
+                       });
 
 
-                       }
-                       return false;
-                   });
+                   }
+                   else { 
+                       var rp_prep = new Models.RP
+                       {
+                           amount_received = final_amount,
+                           cheque = TABLE_MODEL.get_list,
+                           total_amount = total_amount,
+                           transact_items = transaction_items,
+                           check_empty = (TABLE_MODEL.get_list.Count == 0)
+                       };
+
+
+                       HttpServer.Post(Routes.R_SALES_SAVE, new StringContent(JsonConvert.SerializeObject(rp_prep), Encoding.UTF8, "application/json"), (passed, results) =>
+                       {
+                           if (passed)
+                           {
+
+                               if (!bool.Parse(results.success))
+                               {
+                                   var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                                   foreach (String control in data_.Keys)
+                                   {
+                                       _error.errorList1.addError(String.Join(",", data_[control]));
+                                   }
+                                   _error.Show();
+                                   return false;
+                               }
+
+                               frmSuccess success = new frmSuccess();
+                               success.setDesc(results.data.ToString());
+                               success.ShowDialog();
+
+
+                           }
+                           return false;
+                       });
+                   }
 
                }
 
@@ -125,6 +179,8 @@ namespace LSM.Forms
            }
 
 
+
+           this.Close();
         }
 
         private bool  MODE_CH() {

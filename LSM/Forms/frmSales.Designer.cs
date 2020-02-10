@@ -234,7 +234,6 @@
             this.txtItem.Size = new System.Drawing.Size(227, 24);
             this.txtItem.TabIndex = 23;
             this.txtItem.Click += new System.EventHandler(this.txtItem_Click);
-            this.txtItem.TextChanged += new System.EventHandler(this.txtItem_TextChanged);
             // 
             // label11
             // 

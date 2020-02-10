@@ -148,6 +148,12 @@ namespace LSM.Forms
                 return false;
             });
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Models.GlobalSettings.pastScreen = this;
+            Models.GlobalSettings.main_screen.mdi_module_load(new frmTransactions());
+        }
     }
 
     class rDF

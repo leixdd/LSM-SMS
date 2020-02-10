@@ -97,7 +97,7 @@
             this.btnItemList.ForeColor = System.Drawing.Color.White;
             this.btnItemList.Image = global::LSM.Properties.Resources.Info_24px;
             this.btnItemList.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnItemList.Location = new System.Drawing.Point(0, 346);
+            this.btnItemList.Location = new System.Drawing.Point(0, 300);
             this.btnItemList.Name = "btnItemList";
             this.btnItemList.Size = new System.Drawing.Size(155, 40);
             this.btnItemList.TabIndex = 12;
@@ -118,7 +118,7 @@
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::LSM.Properties.Resources.Report_Card_24px;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button5.Location = new System.Drawing.Point(0, 300);
+            this.button5.Location = new System.Drawing.Point(0, 346);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(155, 40);
             this.button5.TabIndex = 11;
@@ -294,7 +294,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(6, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 25);
+            this.label1.Size = new System.Drawing.Size(320, 24);
             this.label1.TabIndex = 11;
             this.label1.Text = "SALES MANAGEMENT SYSTEM";
             // 

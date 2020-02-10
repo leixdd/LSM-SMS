@@ -235,3 +235,6 @@ G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmAddItemSetup.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmAddCustomer.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmAddItemSetup.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmCustomer.resources
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmSearchCutomer.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmSearchCutomer.resources
+F:\_lsm\LSM\obj\Debug\LSM.Forms.frmTransactions.resources
