@@ -151,8 +151,12 @@ namespace LSM.Forms
 
         private void button1_Click_1(object sender, EventArgs e)
         {
+            frmTransactions transaction_frm = new frmTransactions();
+            var _id = list_object[lstCustomers.SelectedIndex].id;
+            transaction_frm.setCustomerID(_id);
+
             Models.GlobalSettings.pastScreen = this;
-            Models.GlobalSettings.main_screen.mdi_module_load(new frmTransactions());
+            Models.GlobalSettings.main_screen.mdi_module_load(transaction_frm);
         }
     }
 

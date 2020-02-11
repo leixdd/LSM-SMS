@@ -33,5 +33,6 @@ namespace LSM.Utilities
         public static String R_CUSTOMERS = SERVERHOST + "/api/customers";
         public static String R_CUSTOMERS_BIND_ITEM = SERVERHOST + "/api/customers/bindItem";
         public static String R_CUSTOMERS_BIND_ITEM_GET = SERVERHOST + "/api/customers/bindItems/";
+        public static String R_CUSTOMERS_DELIVERY_HISTORY = SERVERHOST + "/api/customers/deliveries/";
     }
 }
