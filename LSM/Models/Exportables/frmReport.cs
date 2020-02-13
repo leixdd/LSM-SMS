@@ -21,7 +21,7 @@ namespace LSM.Models.Exportables
         
         private void frmReport_Load(object sender, EventArgs e)
         {
-
+            this.reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             this.reportViewer1.RefreshReport();
         }
 

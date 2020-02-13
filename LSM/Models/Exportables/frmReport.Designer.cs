@@ -59,7 +59,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmReport";
-            this.Text = "frmReport";
+            this.Text = "Statement of Account Report";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmReport_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tABLEBILLINGMODELBindingSource)).EndInit();
             this.ResumeLayout(false);
