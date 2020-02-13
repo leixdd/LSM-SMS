@@ -352,6 +352,7 @@
       <DependentUpon>frmMain_Screen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Exportables\SOA.rdlc" />
+    <EmbeddedResource Include="Models\Exportables\SOA2.rdlc" />
     <EmbeddedResource Include="User\Customer.resx">
       <DependentUpon>Customer.cs</DependentUpon>
     </EmbeddedResource>
@@ -384,6 +385,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LSM.Models.TABLE_BILLING_MODEL.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,12 +21,15 @@ namespace LSM.Forms
 
         private Dictionary<long, IList<BILLING_MODEL>> dict_bills = new Dictionary<long, IList<BILLING_MODEL>>();
 
+
+        private Dictionary<long, CUSTOMER_MODEL> dict_customer = new Dictionary<long, CUSTOMER_MODEL>();
+
         protected Models.DGV_MODEL<Models.TABLE_DELIVERIES_LIST> TABLE_MODEL_DELIVERIES = new Models.DGV_MODEL<Models.TABLE_DELIVERIES_LIST>();
 
         protected Models.DGV_MODEL<Models.TABLE_BILLING_MODEL> TABLE_MODEL_ITEM = new Models.DGV_MODEL<Models.TABLE_BILLING_MODEL>();
 
         protected Models.DGV_MODEL<Models.ChequeDGV> TABLE_MODEL_CHEQUE = new Models.DGV_MODEL<Models.ChequeDGV>();
-
+        
         public frmTransactions()
         {
             InitializeComponent();
@@ -77,6 +81,7 @@ namespace LSM.Forms
 
                             dict_cheques.Add(item.id, item.bank_transactions);
                             dict_bills.Add(item.id, item.billing_items);
+                            dict_customer.Add(item.id, item.customer);
 
                             TABLE_MODEL_DELIVERIES.get_list.Add(model);
                         }
@@ -255,14 +260,73 @@ namespace LSM.Forms
             txtAmountReceived.Text = dgvDeliveries.SelectedRows[0].Cells["AmountReceived"].Value.ToString();
             txtDeliveryAmount.Text = dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString();
 
+            dgvBilling.Columns["DRBind"].Visible = false;
+            dgvBilling.Columns["ItemID"].Visible = false;
+            dgvBilling.Columns["ID"].Visible = false;
+            dgvBilling.Columns["Amount"].DefaultCellStyle.Format = "N2";
+
             this.load_cheques(dict_cheques[(long) dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
             this.load_charages(dict_bills[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
+
             Models.Exportables.frmReport rpt = new Models.Exportables.frmReport();
+            rpt.setDS(TABLE_MODEL_ITEM.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address);
             rpt.ShowDialog();
         }
+
+
+        #region DataTableCast
+
+        private DataTable ToDataTable<T>(List<T> items)
+
+        {
+
+            DataTable dataTable = new DataTable(typeof(T).Name);
+
+            //Get all the properties
+
+            PropertyInfo[] Props = typeof(T).GetProperties(BindingFlags.Public | BindingFlags.Instance);
+
+            foreach (PropertyInfo prop in Props)
+
+            {
+
+                //Setting column names as Property names
+
+                dataTable.Columns.Add(prop.Name);
+
+            }
+
+            foreach (T item in items)
+
+            {
+
+                var values = new object[Props.Length];
+
+                for (int i = 0; i < Props.Length; i++)
+
+                {
+
+                    //inserting property values to datatable rows
+
+                    values[i] = Props[i].GetValue(item, null);
+
+                }
+
+                dataTable.Rows.Add(values);
+
+            }
+
+            //put a breakpoint here and check datatable
+
+            return dataTable;
+
+        }
+
+        #endregion
     }
 }
