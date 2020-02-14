@@ -197,12 +197,14 @@
             this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
             this.dgvDeliveryItems.Name = "dgvDeliveryItems";
+            this.dgvDeliveryItems.ReadOnly = true;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvDeliveryItems.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeliveryItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveryItems.Size = new System.Drawing.Size(710, 280);
             this.dgvDeliveryItems.TabIndex = 10;
+            this.dgvDeliveryItems.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDeliveryItems_UserDeletingRow);
             // 
             // bunifuSeparator3
             // 

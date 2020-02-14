@@ -67,7 +67,10 @@ namespace LSM
 
                 return false;
             });
-    
+
+            lblStatus.Text = "Connected";
+            lblUserID.Text = Models.GlobalSettings.CURRENT_USER.Username;
+            lblSessionID.Text = DateTime.Today.ToLongDateString();
         }
 
         private void button8_Click(object sender, EventArgs e)
@@ -129,6 +132,11 @@ namespace LSM
         {
 
             mdi_module_load(new Forms.frmItemList(), (Button)sender);
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

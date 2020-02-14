@@ -314,7 +314,7 @@
             this.label14.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(14, 374);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(151, 19);
+            this.label14.Size = new System.Drawing.Size(126, 17);
             this.label14.TabIndex = 12;
             this.label14.Text = "Date to be paid : ";
             // 
@@ -341,7 +341,7 @@
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator2.LineThickness = 46;
+            this.bunifuSeparator2.LineThickness = 57;
             this.bunifuSeparator2.Location = new System.Drawing.Point(15, 159);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.bunifuSeparator2.Name = "bunifuSeparator2";

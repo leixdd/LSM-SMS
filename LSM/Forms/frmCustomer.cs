@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -157,6 +158,48 @@ namespace LSM.Forms
 
             Models.GlobalSettings.pastScreen = this;
             Models.GlobalSettings.main_screen.mdi_module_load(transaction_frm);
+        }
+
+        private void dgvDeliveryItems_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+            DialogResult user_ = MessageBox.Show(this, "Are you sure you want to unbound this item? [ " + e.Row.Cells["ItemName"].Value + " ] to customer's item list? ", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+            if (user_ == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+            else { 
+
+                HttpServer.Post(Routes.R_UNBOUND_ITEM + e.Row.Cells["BindID"].Value, new StringContent("[]", Encoding.UTF8, "application/json"), (passed, results) =>
+                {
+
+                    if (passed)
+                    {
+
+                        if (bool.Parse(results.success))
+                        {
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
+                            return true;
+                        }
+
+                        frmError _error = new frmError();
+                        var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                        foreach (String control in data_.Keys)
+                        {
+                            _error.errorList1.addError(String.Join(",", data_[control]));
+                        }
+
+                        _error.Show();
+
+
+                        return false;
+                    }
+
+                    return false;
+                });
+            }
         }
     }
 

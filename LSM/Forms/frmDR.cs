@@ -22,12 +22,20 @@ namespace LSM.Forms
 
         public long dto_id = 0;
 
+        public Boolean isEditing = false;
+
         public frmDR()
         {
             InitializeComponent();
             dgvDeliveryItems.DataSource = new BindingSource(dr_items, null);
             generate_combo_units();
             resetDGV();
+        }
+
+        public frmDR(long dr_no)
+        {
+            isEditing = true;
+            DRNO_Value = dr_no;
         }
 
         protected void generate_combo_units()
@@ -84,8 +92,12 @@ namespace LSM.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new Forms.frmSetDR().ShowDialog();
-            this.btnDRNumber.Text = DRNO_Value.ToString();
+            if (!isEditing)
+            {
+                new Forms.frmSetDR().ShowDialog();
+                this.btnDRNumber.Text = DRNO_Value.ToString();
+            }
+            
         }
 
         private void frmDR_Load(object sender, EventArgs e)
@@ -95,13 +107,17 @@ namespace LSM.Forms
 
         private void frmDR_Shown(object sender, EventArgs e)
         {
-            if (DRNO_Value == 0)
+            if (!isEditing)
             {
-                new Forms.frmSetDR().ShowDialog();
+                if (DRNO_Value == 0)
+                {
+                    new Forms.frmSetDR().ShowDialog();
+                }
+
+
+                this.btnDRNumber.Text = DRNO_Value.ToString();
             }
-
-
-            this.btnDRNumber.Text = DRNO_Value.ToString();
+            
         }
 
         private void dgvDeliveryItems_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
@@ -175,54 +191,59 @@ namespace LSM.Forms
                 check_empty = true
             };
 
-            DialogResult result = MessageBox.Show(this, "Do you want to setup the bank checks?", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+            
 
-            if (result == DialogResult.Yes)
+            if (list_dr.Count > 0)
             {
-                if (list_dr.Count > 0)
-                {
+                DialogResult result = MessageBox.Show(this, "Do you want to setup the bank checks?", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
 
+                if (result == DialogResult.Yes)
+                {
                     MOP rp = new MOP();
                     rp.setDRTrans(dr_setup);
                     rp.ShowDialog();
+
                 }
                 else
                 {
-                    MessageBox.Show(this, "Item List must have atleast 1 item to transact.", "Opps!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else { 
 
-                HttpServer.Post(Routes.R_DR_SAVE, new StringContent(JsonConvert.SerializeObject(dr_setup), Encoding.UTF8, "application/json"), (passed, results) =>
-                {
-                    if (passed)
+                    HttpServer.Post(Routes.R_DR_SAVE, new StringContent(JsonConvert.SerializeObject(dr_setup), Encoding.UTF8, "application/json"), (passed, results) =>
                     {
-
-                        if (!bool.Parse(results.success))
+                        if (passed)
                         {
-                            frmError _error = new frmError();
-                            var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
-                            foreach (String control in data_.Keys)
+
+                            if (!bool.Parse(results.success))
                             {
-                                _error.errorList1.addError(String.Join(",", data_[control]));
+                                frmError _error = new frmError();
+                                var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                                foreach (String control in data_.Keys)
+                                {
+                                    _error.errorList1.addError(String.Join(",", data_[control]));
+                                }
+
+                                _error.Show();
+
+
+                                return false;
                             }
 
-                            _error.Show();
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
 
 
-                            return false;
                         }
+                        return false;
+                    });
 
-                        frmSuccess success = new frmSuccess();
-                        success.setDesc(results.data.ToString());
-                        success.ShowDialog();
-
-
-                    }
-                    return false;
-                });
-
+                }
             }
+            else
+            {
+                MessageBox.Show(this, "Item List must have atleast 1 item to transact.", "Opps!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
         }
 
         private void txtDeliveredTo_MouseClick(object sender, MouseEventArgs e)

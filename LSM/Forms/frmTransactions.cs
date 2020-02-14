@@ -274,8 +274,18 @@ namespace LSM.Forms
             CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
 
             Models.Exportables.frmReport rpt = new Models.Exportables.frmReport();
-            rpt.setDS(TABLE_MODEL_ITEM.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address);
+            rpt.setDS(TABLE_MODEL_ITEM.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address, dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString());
             rpt.ShowDialog();
+        }
+
+        private void dgvBilling_UserDeletingRow(object sender, DataGridViewRowCancelEventArgs e)
+        {
+
+        }
+
+        private void btnItem_Click(object sender, EventArgs e)
+        {
+
         }
         
     }

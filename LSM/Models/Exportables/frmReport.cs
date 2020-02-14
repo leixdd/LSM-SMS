@@ -25,14 +25,15 @@ namespace LSM.Models.Exportables
             this.reportViewer1.RefreshReport();
         }
 
-        public void setDS(List<TABLE_BILLING_MODEL> ds, String customer_name, String company_name, String contact_number, String company_address)
+        public void setDS(List<TABLE_BILLING_MODEL> ds, String customer_name, String company_name, String contact_number, String company_address, String total_amount)
         {
             tABLEBILLINGMODELBindingSource.DataSource = ds;
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter[] {
                 new ReportParameter("customerName", customer_name),
                 new ReportParameter("companyName", company_name),
                 new ReportParameter("contactNumber", contact_number),
-                new ReportParameter("companyAddress", company_address)
+                new ReportParameter("companyAddress", company_address),
+                new ReportParameter("totalAmount", total_amount)
             });
             this.reportViewer1.RefreshReport();
         }

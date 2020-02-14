@@ -23,6 +23,7 @@ namespace LSM.Utilities
         //SI
         public static String R_SALES_SAVE = SERVERHOST + "/api/sales/save";
         public static String R_SALES_REPORTS_LIST_SALES = SERVERHOST + "/api/sales/reports/sales";
+        public static String R_SALES_DASHBOARD = SERVERHOST + "/api/sales/reports/ncg";
 
         //ITEMS
         public static String R_ITEMS_SAVE = SERVERHOST + "/api/items/save";
@@ -34,5 +35,6 @@ namespace LSM.Utilities
         public static String R_CUSTOMERS_BIND_ITEM = SERVERHOST + "/api/customers/bindItem";
         public static String R_CUSTOMERS_BIND_ITEM_GET = SERVERHOST + "/api/customers/bindItems/";
         public static String R_CUSTOMERS_DELIVERY_HISTORY = SERVERHOST + "/api/customers/deliveries/";
+        public static String R_UNBOUND_ITEM = SERVERHOST + "/api/customers/removeBindItem/";
     }
 }

@@ -50,18 +50,11 @@
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel6 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.txtUserType = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel7 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblUserNum = new System.Windows.Forms.ToolStripStatusLabel();
-            this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel5 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblUserID = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTipDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSessionID = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lblTimeout = new System.Windows.Forms.ToolStripStatusLabel();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -294,7 +287,7 @@
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label1.Location = new System.Drawing.Point(6, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(320, 24);
+            this.label1.Size = new System.Drawing.Size(307, 25);
             this.label1.TabIndex = 11;
             this.label1.Text = "SALES MANAGEMENT SYSTEM";
             // 
@@ -363,23 +356,17 @@
             this.toolStripStatusLabel1,
             this.lblStatus,
             this.toolStripStatusLabel2,
-            this.toolStripStatusLabel6,
-            this.txtUserType,
-            this.toolStripStatusLabel7,
-            this.toolStripStatusLabel3,
-            this.lblUserNum,
-            this.toolStripStatusLabel4,
             this.toolStripStatusLabel5,
             this.lblUserID,
             this.toolStripStatusLabel8,
             this.ToolTipDate,
-            this.lblSessionID,
-            this.lblTimeout});
+            this.lblSessionID});
             this.statusStrip1.Location = new System.Drawing.Point(155, 534);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(900, 22);
             this.statusStrip1.TabIndex = 13;
             this.statusStrip1.Text = "StatusStrip";
+            this.statusStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.statusStrip1_ItemClicked);
             // 
             // toolStripStatusLabel1
             // 
@@ -401,48 +388,6 @@
             this.toolStripStatusLabel2.Name = "toolStripStatusLabel2";
             this.toolStripStatusLabel2.Size = new System.Drawing.Size(10, 17);
             this.toolStripStatusLabel2.Text = "|";
-            // 
-            // toolStripStatusLabel6
-            // 
-            this.toolStripStatusLabel6.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel6.Name = "toolStripStatusLabel6";
-            this.toolStripStatusLabel6.Size = new System.Drawing.Size(64, 17);
-            this.toolStripStatusLabel6.Text = "User Type :";
-            // 
-            // txtUserType
-            // 
-            this.txtUserType.ForeColor = System.Drawing.Color.White;
-            this.txtUserType.Name = "txtUserType";
-            this.txtUserType.Size = new System.Drawing.Size(37, 17);
-            this.txtUserType.Text = "Temp";
-            // 
-            // toolStripStatusLabel7
-            // 
-            this.toolStripStatusLabel7.ForeColor = System.Drawing.Color.White;
-            this.toolStripStatusLabel7.Name = "toolStripStatusLabel7";
-            this.toolStripStatusLabel7.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel7.Text = "|";
-            // 
-            // toolStripStatusLabel3
-            // 
-            this.toolStripStatusLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(50, 17);
-            this.toolStripStatusLabel3.Text = "User ID :";
-            // 
-            // lblUserNum
-            // 
-            this.lblUserNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.lblUserNum.Name = "lblUserNum";
-            this.lblUserNum.Size = new System.Drawing.Size(37, 17);
-            this.lblUserNum.Text = "Temp";
-            // 
-            // toolStripStatusLabel4
-            // 
-            this.toolStripStatusLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.toolStripStatusLabel4.Name = "toolStripStatusLabel4";
-            this.toolStripStatusLabel4.Size = new System.Drawing.Size(10, 17);
-            this.toolStripStatusLabel4.Text = "|";
             // 
             // toolStripStatusLabel5
             // 
@@ -480,14 +425,6 @@
             this.lblSessionID.Size = new System.Drawing.Size(35, 17);
             this.lblSessionID.Text = "temp";
             this.lblSessionID.Visible = false;
-            // 
-            // lblTimeout
-            // 
-            this.lblTimeout.ForeColor = System.Drawing.Color.White;
-            this.lblTimeout.Name = "lblTimeout";
-            this.lblTimeout.Size = new System.Drawing.Size(35, 17);
-            this.lblTimeout.Text = "temp";
-            this.lblTimeout.Visible = false;
             // 
             // frmMain_Screen
             // 
@@ -531,18 +468,11 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         public System.Windows.Forms.ToolStripStatusLabel lblStatus;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel6;
-        public System.Windows.Forms.ToolStripStatusLabel txtUserType;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel7;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
-        public System.Windows.Forms.ToolStripStatusLabel lblUserNum;
-        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel4;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel5;
         public System.Windows.Forms.ToolStripStatusLabel lblUserID;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel8;
         private System.Windows.Forms.ToolStripStatusLabel ToolTipDate;
         public System.Windows.Forms.ToolStripStatusLabel lblSessionID;
-        public System.Windows.Forms.ToolStripStatusLabel lblTimeout;
         private System.Windows.Forms.Button btnDR;
         private System.Windows.Forms.Button btnTN;
         private System.Windows.Forms.Button btnDashboard;
