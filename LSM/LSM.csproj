@@ -34,6 +34,9 @@
   <PropertyGroup>
     <StartupObject>LSM.Program</StartupObject>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>79292861_1509882239169157_3535727475906576384_n_Qej_icon.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -458,6 +461,7 @@
     <None Include="Resources\okay-1.1s-128px%281%29.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="79292861_1509882239169157_3535727475906576384_n_Qej_icon.ico" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
