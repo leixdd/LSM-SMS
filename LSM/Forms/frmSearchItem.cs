@@ -216,6 +216,11 @@ namespace LSM.Forms
 
             TABLE_MODEL.get_model.ResetBindings();
             resetDGV();
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.dgvDeliveryItems.Focus();
+            }
         }
 
         private void dgvDeliveryItems_DoubleClick(object sender, EventArgs e)
@@ -250,6 +255,16 @@ namespace LSM.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvDeliveryItems_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                selection();
+                e.Handled = true;
+                this.Close();
+            }
         }
     }
 }

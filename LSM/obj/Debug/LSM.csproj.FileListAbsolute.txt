@@ -206,7 +206,6 @@ G:\LSM\LSM-SMS\LSM\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 G:\LSM\LSM-SMS\LSM\bin\Debug\Newtonsoft.Json.dll
 G:\LSM\LSM-SMS\LSM\bin\Debug\INIFileParser.xml
 G:\LSM\LSM-SMS\LSM\bin\Debug\Newtonsoft.Json.xml
-G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmAddCustomer.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmCustomer.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmDashboard.resources
@@ -397,3 +396,5 @@ G:\LSM\LSM-SMS\LSM\bin\Debug\zh-CHS\Microsoft.ReportViewer.WinForms.resources.dl
 G:\LSM\LSM-SMS\LSM\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dll
 G:\LSM\LSM-SMS\LSM\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 G:\LSM\LSM-SMS\LSM\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmEditItemSetup.resources
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache

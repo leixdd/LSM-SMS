@@ -99,6 +99,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Management" />
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.Services" />
@@ -118,6 +119,12 @@
     </Compile>
     <Compile Include="Forms\frmAddCustomer.Designer.cs">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmEditItemSetup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmEditItemSetup.Designer.cs">
+      <DependentUpon>frmEditItemSetup.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmAddItemSetup.cs">
       <SubType>Form</SubType>
@@ -249,6 +256,7 @@
     <Compile Include="Models\Report_Templates\SHARED_R.cs" />
     <Compile Include="Models\RP.cs" />
     <Compile Include="Models\Selection_Model.cs" />
+    <Compile Include="Models\TABLE_BILLING_MODEL_RT.cs" />
     <Compile Include="Models\TABLE_BILLING_MODEL.cs" />
     <Compile Include="Models\TABLE_CUSTOMER_LIST.cs" />
     <Compile Include="Models\TABLE_DELIVERIES_LIST.cs" />
@@ -312,6 +320,9 @@
     <Compile Include="Utilities\Routes.cs" />
     <EmbeddedResource Include="Forms\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmEditItemSetup.resx">
+      <DependentUpon>frmEditItemSetup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddItemSetup.resx">
       <DependentUpon>frmAddItemSetup.cs</DependentUpon>

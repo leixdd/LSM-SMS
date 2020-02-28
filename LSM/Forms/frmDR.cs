@@ -184,7 +184,7 @@ namespace LSM.Forms
                 datetime_to_be_paid = dtpToBePaid.Value.ToString("yyyy-MM-dd"),
                 dr_list = list_dr,
                 dr_no = btnDRNumber.Text,
-                terms = (txtTerms.Text.Equals("") ? "No Input" : txtTerms.Text),
+                terms = txtTerms.Value.ToString(),
                 tin = (txtTin.Text.Equals("") ? "No Input" : txtTin.Text),
                 updated_by = Models.GlobalSettings.CURRENT_USER.user_id.ToString(), //getting the current user
                 total_amount = total_amount_generate(list_dr),
@@ -268,6 +268,18 @@ namespace LSM.Forms
             
             dto_id);
             si.ShowDialog();
+        }
+
+        private void txtTerms_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DR_DATE = dtpDate.Value;
+            dtpToBePaid.Value = DR_DATE.AddDays((Double)txtTerms.Value);
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DR_DATE = dtpDate.Value;
+            dtpToBePaid.Value = DR_DATE.AddDays((Double)txtTerms.Value);
         }
     }
 }
