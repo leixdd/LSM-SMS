@@ -237,7 +237,8 @@ namespace LSM.Forms
                 ((System.Windows.Forms.NumericUpDown)selection_model.control[1]).Value = Decimal.Parse(dgvDeliveryItems.SelectedRows[0].Cells["Cost"].Value.ToString());
                 ((System.Windows.Forms.NumericUpDown)selection_model.control[3]).Value = Decimal.Parse(dgvDeliveryItems.SelectedRows[0].Cells["Cost"].Value.ToString());
                 selection_model.control[2].Text = dgvDeliveryItems.SelectedRows[0].Cells["Size"].Value.ToString();
-                Models.GlobalSettings.Selection_Item_ID = int.Parse(dgvDeliveryItems.SelectedRows[0].Cells["ID"].Value.ToString());
+                Models.GlobalSettings.Selection_II_ID = int.Parse(dgvDeliveryItems.SelectedRows[0].Cells["ID"].Value.ToString());
+                Console.WriteLine(Models.GlobalSettings.Selection_II_ID);
             }
 
         }

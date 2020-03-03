@@ -21,6 +21,7 @@ namespace LSM.Forms
         protected static BindingList<Models.DR> dr_items = new BindingList<Models.DR>(list_dr);
 
         public long dto_id = 0;
+        public long item_id = 0;
 
         public Boolean isEditing = false;
 
@@ -141,7 +142,7 @@ namespace LSM.Forms
                     Item = txtItem.Text,
                     Quantity = (Double)numQuantity.Value,
                     Size = txtItemSize.Text,
-                    ItemID = Models.GlobalSettings.Selection_Item_ID,
+                    ItemID = (int) this.item_id,
                     UnitPrice = (Double)numUnitPrice.Value,
                     Amount = ((Double)numUnitPrice.Value * (Double)numQuantity.Value).ToString("C", CultureInfo.CurrentCulture)
                 });
@@ -268,6 +269,10 @@ namespace LSM.Forms
             
             dto_id);
             si.ShowDialog();
+
+            this.item_id = Models.GlobalSettings.Selection_II_ID;
+            Models.GlobalSettings.Selection_II_ID = 0;
+
         }
 
         private void txtTerms_ValueChanged(object sender, EventArgs e)

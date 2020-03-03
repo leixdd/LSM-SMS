@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain_Screen));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnItemList = new System.Windows.Forms.Button();
@@ -45,7 +46,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
+            this.btnNotifications = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
@@ -55,6 +56,7 @@
             this.toolStripStatusLabel8 = new System.Windows.Forms.ToolStripStatusLabel();
             this.ToolTipDate = new System.Windows.Forms.ToolStripStatusLabel();
             this.lblSessionID = new System.Windows.Forms.ToolStripStatusLabel();
+            this.NotifTimer = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -262,7 +264,7 @@
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.button8);
             this.panel4.Controls.Add(this.button9);
-            this.panel4.Controls.Add(this.button7);
+            this.panel4.Controls.Add(this.btnNotifications);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel4.Location = new System.Drawing.Point(155, 10);
             this.panel4.Name = "panel4";
@@ -330,24 +332,26 @@
             this.button9.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button9.UseVisualStyleBackColor = false;
             // 
-            // button7
+            // btnNotifications
             // 
-            this.button7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(771, 6);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(35, 37);
-            this.button7.TabIndex = 10;
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = false;
+            this.btnNotifications.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNotifications.BackColor = System.Drawing.Color.Transparent;
+            this.btnNotifications.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnNotifications.FlatAppearance.BorderSize = 0;
+            this.btnNotifications.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNotifications.Font = new System.Drawing.Font("Century Gothic", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNotifications.ForeColor = System.Drawing.Color.Black;
+            this.btnNotifications.Image = ((System.Drawing.Image)(resources.GetObject("btnNotifications.Image")));
+            this.btnNotifications.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btnNotifications.Location = new System.Drawing.Point(587, 8);
+            this.btnNotifications.Name = "btnNotifications";
+            this.btnNotifications.Size = new System.Drawing.Size(216, 37);
+            this.btnNotifications.TabIndex = 10;
+            this.btnNotifications.Text = "Notifications : 0";
+            this.btnNotifications.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnNotifications.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.btnNotifications.UseVisualStyleBackColor = false;
+            this.btnNotifications.Click += new System.EventHandler(this.btnNotifications_Click);
             // 
             // statusStrip1
             // 
@@ -379,7 +383,7 @@
             // 
             this.lblStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblStatus.Name = "lblStatus";
-            this.lblStatus.Size = new System.Drawing.Size(37, 17);
+            this.lblStatus.Size = new System.Drawing.Size(36, 17);
             this.lblStatus.Text = "Temp";
             // 
             // toolStripStatusLabel2
@@ -400,7 +404,7 @@
             // 
             this.lblUserID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblUserID.Name = "lblUserID";
-            this.lblUserID.Size = new System.Drawing.Size(37, 17);
+            this.lblUserID.Size = new System.Drawing.Size(36, 17);
             this.lblUserID.Text = "Temp";
             // 
             // toolStripStatusLabel8
@@ -425,6 +429,12 @@
             this.lblSessionID.Size = new System.Drawing.Size(35, 17);
             this.lblSessionID.Text = "temp";
             this.lblSessionID.Visible = false;
+            // 
+            // NotifTimer
+            // 
+            this.NotifTimer.Enabled = true;
+            this.NotifTimer.Interval = 30000;
+            this.NotifTimer.Tick += new System.EventHandler(this.NotifTimer_Tick);
             // 
             // frmMain_Screen
             // 
@@ -463,7 +473,7 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnNotifications;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
@@ -482,5 +492,6 @@
         private System.Windows.Forms.Label lblModule;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button btnItemList;
+        private System.Windows.Forms.Timer NotifTimer;
     }
 }

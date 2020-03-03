@@ -42,5 +42,8 @@ namespace LSM.Utilities
         public static String R_CUSTOMERS_ITEM_RETURN = SERVERHOST + "/api/customers/setToReturn";
 
         public static String R_UNBOUND_ITEM = SERVERHOST + "/api/customers/removeBindItem/";
+
+
+        public static String R_NOTIFICATIONS = SERVERHOST + "/api/sales/reports/notifications";
     }
 }

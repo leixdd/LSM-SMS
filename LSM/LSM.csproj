@@ -114,12 +114,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\frmAddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +161,12 @@
     </Compile>
     <Compile Include="Forms\frmItemList.Designer.cs">
       <DependentUpon>frmItemList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmNotifications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmNotifications.Designer.cs">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Exportables\frmReport.cs">
       <SubType>Form</SubType>
@@ -256,6 +256,7 @@
     <Compile Include="Models\IReport.cs" />
     <Compile Include="Models\ItemBind.cs" />
     <Compile Include="Models\JSON_ITEM_MODEL.cs" />
+    <Compile Include="Models\Notifications.cs" />
     <Compile Include="Models\ReportTemplate.cs" />
     <Compile Include="Models\Report_Templates\RPT_SalesTransactions.cs" />
     <Compile Include="Models\Report_Templates\SalesTransactions_Model.cs" />
@@ -268,6 +269,7 @@
     <Compile Include="Models\TABLE_DELIVERIES_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_BIND_LIST.cs" />
     <Compile Include="Models\TABLE_ITEM_LIST.cs" />
+    <Compile Include="Models\TABLE_NOTIFICATIONS.cs" />
     <Compile Include="Models\TransactionRPT.cs" />
     <Compile Include="Models\DR_RPT.cs" />
     <Compile Include="Models\Server.cs" />
@@ -324,9 +326,6 @@
     <Compile Include="Utilities\HttpServer.cs" />
     <Compile Include="Utilities\Response.cs" />
     <Compile Include="Utilities\Routes.cs" />
-    <EmbeddedResource Include="Forms\Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmAddCustomer.resx">
       <DependentUpon>frmAddCustomer.cs</DependentUpon>
     </EmbeddedResource>
@@ -350,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmItemList.resx">
       <DependentUpon>frmItemList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmNotifications.resx">
+      <DependentUpon>frmNotifications.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Exportables\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
