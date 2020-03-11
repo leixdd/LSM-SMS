@@ -33,7 +33,6 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txtTin = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtTerms = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.dtpDate = new System.Windows.Forms.DateTimePicker();
             this.label5 = new System.Windows.Forms.Label();
@@ -67,6 +66,7 @@
             this.btnAddItem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvDeliveryItems = new System.Windows.Forms.DataGridView();
+            this.txtTerms = new System.Windows.Forms.NumericUpDown();
             this.groupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -75,15 +75,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).BeginInit();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTerms)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.txtTerms);
             this.groupBox1.Controls.Add(this.txtTin);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.txtTerms);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.dtpDate);
             this.groupBox1.Controls.Add(this.label5);
@@ -121,15 +122,6 @@
             this.label7.TabIndex = 10;
             this.label7.Text = "TIN :";
             // 
-            // txtTerms
-            // 
-            this.txtTerms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTerms.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTerms.Location = new System.Drawing.Point(815, 53);
-            this.txtTerms.Name = "txtTerms";
-            this.txtTerms.Size = new System.Drawing.Size(260, 24);
-            this.txtTerms.TabIndex = 9;
-            // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -150,6 +142,7 @@
             this.dtpDate.Size = new System.Drawing.Size(260, 24);
             this.dtpDate.TabIndex = 7;
             this.dtpDate.Value = new System.DateTime(2020, 2, 10, 7, 57, 59, 0);
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
             // 
             // label5
             // 
@@ -302,6 +295,7 @@
             // dtpToBePaid
             // 
             this.dtpToBePaid.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dtpToBePaid.Enabled = false;
             this.dtpToBePaid.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpToBePaid.Location = new System.Drawing.Point(15, 398);
             this.dtpToBePaid.Name = "dtpToBePaid";
@@ -341,7 +335,7 @@
             // 
             this.bunifuSeparator2.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
-            this.bunifuSeparator2.LineThickness = 57;
+            this.bunifuSeparator2.LineThickness = 70;
             this.bunifuSeparator2.Location = new System.Drawing.Point(15, 159);
             this.bunifuSeparator2.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.bunifuSeparator2.Name = "bunifuSeparator2";
@@ -430,11 +424,6 @@
             // numQuantity
             // 
             this.numQuantity.DecimalPlaces = 2;
-            this.numQuantity.Increment = new decimal(new int[] {
-            5,
-            0,
-            0,
-            65536});
             this.numQuantity.Location = new System.Drawing.Point(118, 232);
             this.numQuantity.Maximum = new decimal(new int[] {
             1000000,
@@ -549,12 +538,27 @@
             this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
             this.dgvDeliveryItems.Name = "dgvDeliveryItems";
+            this.dgvDeliveryItems.ReadOnly = true;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.dgvDeliveryItems.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeliveryItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveryItems.Size = new System.Drawing.Size(700, 476);
             this.dgvDeliveryItems.TabIndex = 11;
+            // 
+            // txtTerms
+            // 
+            this.txtTerms.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTerms.Location = new System.Drawing.Point(815, 54);
+            this.txtTerms.Maximum = new decimal(new int[] {
+            200,
+            0,
+            0,
+            0});
+            this.txtTerms.Name = "txtTerms";
+            this.txtTerms.Size = new System.Drawing.Size(260, 22);
+            this.txtTerms.TabIndex = 12;
+            this.txtTerms.ValueChanged += new System.EventHandler(this.txtTerms_ValueChanged);
             // 
             // frmDR
             // 
@@ -583,6 +587,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numQuantity)).EndInit();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTerms)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -599,7 +604,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTin;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtTerms;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DateTimePicker dtpDate;
         private System.Windows.Forms.Label label5;
@@ -626,5 +630,6 @@
         private System.Windows.Forms.DataGridView dgvDeliveryItems;
         private System.Windows.Forms.DateTimePicker dtpToBePaid;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.NumericUpDown txtTerms;
     }
 }

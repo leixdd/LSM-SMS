@@ -201,6 +201,73 @@ namespace LSM.Forms
                 });
             }
         }
+
+        private void cntxSetup_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
+        private void removeThisItemToolStripMenuItem_Click(object sender, EventArgs ex)
+        {
+            var e = this.dgvDeliveryItems.SelectedRows[0];
+            DialogResult user_ = MessageBox.Show(this, "Are you sure you want to unbound this item? [ " + e.Cells["ItemName"].Value + " ] to customer's item list? ", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+            if (user_ != DialogResult.No)
+            {
+                HttpServer.Post(Routes.R_UNBOUND_ITEM + e.Cells["BindID"].Value, new StringContent("[]", Encoding.UTF8, "application/json"), (passed, results) =>
+                {
+
+                    if (passed)
+                    {
+
+                        if (bool.Parse(results.success))
+                        {
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
+                            return true;
+                        }
+
+                        frmError _error = new frmError();
+                        var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                        foreach (String control in data_.Keys)
+                        {
+                            _error.errorList1.addError(String.Join(",", data_[control]));
+                        }
+
+                        _error.Show();
+
+
+                        return false;
+                    }
+
+                    return false;
+                });
+            }
+        }
+
+        private void dgvDeliveryItems_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.Button == MouseButtons.Right)
+            {
+                this.dgvDeliveryItems.Rows[e.RowIndex].Selected = true;
+                Rectangle rect = dgvDeliveryItems.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                cntxSetup.Show((Control)sender, rect.Left + e.X, rect.Top + e.Y);
+            }
+        }
+
+        private void editThisItemToolStripMenuItem_Click(object sender, EventArgs ex)
+        {
+            
+            var e = this.dgvDeliveryItems.SelectedRows[0];
+            frmEditItemSetup editItem = new frmEditItemSetup();
+            editItem.bind_id = (long) e.Cells["BindID"].Value;
+            editItem.item_name = e.Cells["ItemName"].Value.ToString();
+            editItem.item_selling = Decimal.Parse(e.Cells["SellingPrice"].Value.ToString());
+            editItem.item_size = e.Cells["Size"].Value.ToString();
+            editItem.item_discount = Decimal.Parse(e.Cells["Discount"].Value.ToString());
+            editItem.ShowDialog();
+        }
     }
 
     class rDF

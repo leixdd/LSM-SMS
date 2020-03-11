@@ -48,6 +48,29 @@ namespace LSM
 
             mdi_module_load(new Forms.frmDashboard(), btnDashboard);
 
+            Utilities.HttpServer.Get(Utilities.Routes.R_NOTIFICATIONS, (passed, results) =>
+            {
+
+                if (passed)
+                {
+
+                    if (bool.Parse(results.success))
+                    {
+                        var rs_object = JsonConvert.DeserializeObject<List<Models.Notifications>>(results.data.ToString());
+                        Models.GlobalSettings.Notifications = rs_object;
+
+                        btnNotifications.Text = "Notifications: " + Models.GlobalSettings.Notifications.Count.ToString();
+
+
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                return false;
+            }, false);
+
             Utilities.HttpServer.Get(Utilities.Routes.R_UNITS, (passed, results) =>
             {
 
@@ -67,6 +90,9 @@ namespace LSM
 
                 return false;
             });
+
+            NotifTimer.Start();
+
 
             lblStatus.Text = "Connected";
             lblUserID.Text = Models.GlobalSettings.CURRENT_USER.Username;
@@ -137,6 +163,40 @@ namespace LSM
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void NotifTimer_Tick(object sender, EventArgs e)
+        {
+
+            Utilities.HttpServer.Get(Utilities.Routes.R_NOTIFICATIONS, (passed, results) =>
+            {
+
+                if (passed)
+                {
+
+                    if (bool.Parse(results.success))
+                    {
+                        var rs_object = JsonConvert.DeserializeObject<List<Models.Notifications>>(results.data.ToString());
+                        Models.GlobalSettings.Notifications = rs_object;
+
+                        btnNotifications.Text = "Notifications: " + Models.GlobalSettings.Notifications.Count.ToString();
+                        
+
+                        return true;
+                    }
+
+                    return false;
+                }
+
+                return false;
+            }, false);
+
+        }
+
+        private void btnNotifications_Click(object sender, EventArgs e)
+        {
+            Forms.frmNotifications n = new Forms.frmNotifications();
+            n.ShowDialog();
         }
     }
 }

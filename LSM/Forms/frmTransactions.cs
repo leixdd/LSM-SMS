@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,6 +17,7 @@ namespace LSM.Forms
     public partial class frmTransactions : Form
     {
         private long customer_id = 0;
+        private Boolean ableToSelect = false;
 
         private Dictionary<long, IList<CHEQUE_MODEL>> dict_cheques = new Dictionary<long, IList<CHEQUE_MODEL>>();
 
@@ -28,6 +30,8 @@ namespace LSM.Forms
 
         protected Models.DGV_MODEL<Models.TABLE_BILLING_MODEL> TABLE_MODEL_ITEM = new Models.DGV_MODEL<Models.TABLE_BILLING_MODEL>();
 
+        protected Models.DGV_MODEL<Models.TABLE_BILLING_MODEL_RT> TABLE_MODEL_ITEM_RETURNED = new Models.DGV_MODEL<Models.TABLE_BILLING_MODEL_RT>();
+
         protected Models.DGV_MODEL<Models.ChequeDGV> TABLE_MODEL_CHEQUE = new Models.DGV_MODEL<Models.ChequeDGV>();
         
         public frmTransactions()
@@ -36,11 +40,15 @@ namespace LSM.Forms
 
             dgvDeliveries.DataSource = new BindingSource(TABLE_MODEL_DELIVERIES.get_model, null);
             dgvChequeList.DataSource = new BindingSource(TABLE_MODEL_CHEQUE.get_model, null);
+
             dgvBilling.DataSource = new BindingSource(TABLE_MODEL_ITEM.get_model, null);
+
+            dgvRTI.DataSource = new BindingSource(TABLE_MODEL_ITEM_RETURNED.get_model, null);
 
             TABLE_MODEL_CHEQUE.get_model.ResetBindings();
             TABLE_MODEL_DELIVERIES.get_model.ResetBindings();
             TABLE_MODEL_ITEM.get_model.ResetBindings();
+            TABLE_MODEL_ITEM_RETURNED.get_model.ResetBindings();
         }
 
         public void setCustomerID(long id)
@@ -50,6 +58,14 @@ namespace LSM.Forms
         
         private void load_deliveries()
         {
+            TABLE_MODEL_DELIVERIES.get_list.Clear();
+            TABLE_MODEL_DELIVERIES.get_model.ResetBindings();
+
+            dict_cheques.Clear();
+            dict_bills.Clear();
+            dict_customer.Clear();
+
+
             HttpServer.Get(Utilities.Routes.R_CUSTOMERS_DELIVERY_HISTORY + this.customer_id.ToString(), (passed, results) =>
             {
 
@@ -89,7 +105,6 @@ namespace LSM.Forms
                         TABLE_MODEL_DELIVERIES.get_model.ResetBindings();
 
                         resetDGV();
-
                         return true;
                     }
 
@@ -98,6 +113,8 @@ namespace LSM.Forms
 
                 return false;
             });
+
+
         }
 
         private void load_cheques(IList<CHEQUE_MODEL> cheques)
@@ -129,26 +146,43 @@ namespace LSM.Forms
         private void load_charages(IList<BILLING_MODEL> items)
         {
             TABLE_MODEL_ITEM.get_list.Clear();
+            TABLE_MODEL_ITEM_RETURNED.get_list.Clear();
 
             foreach (BILLING_MODEL item in items)
             {
-                var i_model = new Models.TABLE_BILLING_MODEL
+
+                if (item.isReturned == 0)
                 {
-                    Amount = item.amount,
-                    DRBind = item.dr_trans_no,
-                    ID = item.id,
-                    ItemID = item.item_id,
-                    Name = item.item.item_name,
-                    Quantity = item.quantity,
-                    Size = item.item.item_size
-                };
-
-                TABLE_MODEL_ITEM.get_list.Add(i_model);
-
+                    TABLE_MODEL_ITEM.get_list.Add(new Models.TABLE_BILLING_MODEL
+                    {
+                        Amount = item.amount,
+                        DRBind = item.dr_trans_no,
+                        ID = item.id,
+                        ItemID = item.item_id,
+                        Name = item.item.item_name,
+                        Quantity = item.quantity,
+                        Size = item.item.item_size,
+                        isReturned = item.isReturned
+                    });
+                }
+                else {
+                    TABLE_MODEL_ITEM_RETURNED.get_list.Add(new Models.TABLE_BILLING_MODEL_RT
+                    {
+                        Amount = item.amount,
+                        DRBind = item.dr_trans_no,
+                        ID = item.id,
+                        ItemID = item.item_id,
+                        Name = item.item.item_name,
+                        Quantity = item.quantity,
+                        Size = item.item.item_size,
+                        isReturned = item.isReturned
+                    });
+                }
             }
 
 
             TABLE_MODEL_ITEM.get_model.ResetBindings();
+            TABLE_MODEL_ITEM_RETURNED.get_model.ResetBindings();
         }
 
         private void resetDGV()
@@ -219,6 +253,8 @@ namespace LSM.Forms
             public long item_id { get; set; }
             public int quantity { get; set; }
             public double amount { get; set; }
+            public int isReturned { get; set; }
+
             public ITEM_MODEL item { get; set; }
         }
 
@@ -255,18 +291,29 @@ namespace LSM.Forms
 
         private void dgvDeliveries_SelectionChanged(object sender, EventArgs e)
         {
-            dtpDueDate.Value = DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString());
-            dtpDate.Value = DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString());
-            txtAmountReceived.Text = dgvDeliveries.SelectedRows[0].Cells["AmountReceived"].Value.ToString();
-            txtDeliveryAmount.Text = dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString();
+            if (dgvDeliveries.Rows.Count > 0 && dgvDeliveries.SelectedRows.Count > 0)
+            {
+                dtpDueDate.Value = DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString());
+                dtpDate.Value = DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString());
+                txtAmountReceived.Text = dgvDeliveries.SelectedRows[0].Cells["AmountReceived"].Value.ToString();
+                txtDeliveryAmount.Text = dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString();
 
-            dgvBilling.Columns["DRBind"].Visible = false;
-            dgvBilling.Columns["ItemID"].Visible = false;
-            dgvBilling.Columns["ID"].Visible = false;
-            dgvBilling.Columns["Amount"].DefaultCellStyle.Format = "N2";
+                dgvBilling.Columns["DRBind"].Visible = false;
+                dgvBilling.Columns["ItemID"].Visible = false;
+                dgvBilling.Columns["ID"].Visible = false;
+                dgvBilling.Columns["Amount"].DefaultCellStyle.Format = "N2";
 
-            this.load_cheques(dict_cheques[(long) dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
-            this.load_charages(dict_bills[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
+                try
+                {
+                    this.load_cheques(dict_cheques[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
+                    this.load_charages(dict_bills[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value]);
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -286,6 +333,148 @@ namespace LSM.Forms
         private void btnItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgvBilling_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.Button == MouseButtons.Right)
+            {
+                this.dgvBilling.Rows[e.RowIndex].Selected = true;
+                Rectangle rect = this.dgvBilling.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                cntBilling.Show((Control)sender, rect.Left + e.X, rect.Top + e.Y);
+            }
+        }
+
+        private void setAsAReturnedItemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tbl = this.dgvBilling.SelectedRows[0];
+
+            DialogResult user_ = MessageBox.Show(this, "Are you sure you want to send this item to <returned items>? [ " + tbl.Cells["Name"].Value + " ] ", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+            if (user_ != DialogResult.No)
+            {
+
+                var f = new {
+                    bindID = tbl.Cells["ID"].Value,
+                    rtStatus = 1
+                };
+
+                HttpServer.Post(Routes.R_CUSTOMERS_ITEM_RETURN, new StringContent(JsonConvert.SerializeObject(f), Encoding.UTF8, "application/json"), (passed, results) =>
+                {
+
+                    if (passed)
+                    {
+
+                        if (bool.Parse(results.success))
+                        {
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
+                            this.TABLE_MODEL_CHEQUE.get_list.Clear();
+                            this.TABLE_MODEL_CHEQUE.get_model.ResetBindings();
+                            this.TABLE_MODEL_ITEM.get_list.Clear();
+                            this.TABLE_MODEL_ITEM.get_model.ResetBindings();
+                            this.TABLE_MODEL_ITEM_RETURNED.get_list.Clear();
+                            this.TABLE_MODEL_ITEM_RETURNED.get_model.ResetBindings();
+
+                            this.load_deliveries();
+
+                            return true;
+                        }
+
+                        frmError _error = new frmError();
+                        var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                        foreach (String control in data_.Keys)
+                        {
+                            _error.errorList1.addError(String.Join(",", data_[control]));
+                        }
+
+                        _error.Show();
+
+
+                        return false;
+                    }
+
+                    return false;
+                });
+
+            }
+
+
+
+
+        }
+
+        private void bringBackToBillingListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var tbl = this.dgvRTI.SelectedRows[0];
+
+            DialogResult user_ = MessageBox.Show(this, "Are you sure you want to bring back this item to <billing items>? [ " + tbl.Cells["Name"].Value + " ] ", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+            if (user_ != DialogResult.No)
+            {
+
+                var f = new
+                {
+                    bindID = tbl.Cells["ID"].Value,
+                    rtStatus = 0
+                };
+
+                HttpServer.Post(Routes.R_CUSTOMERS_ITEM_RETURN, new StringContent(JsonConvert.SerializeObject(f), Encoding.UTF8, "application/json"), (passed, results) =>
+                {
+
+                    if (passed)
+                    {
+
+                        if (bool.Parse(results.success))
+                        {
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
+                            this.TABLE_MODEL_CHEQUE.get_list.Clear();
+                            this.TABLE_MODEL_CHEQUE.get_model.ResetBindings();
+                            this.TABLE_MODEL_ITEM.get_list.Clear();
+                            this.TABLE_MODEL_ITEM.get_model.ResetBindings();
+                            this.TABLE_MODEL_ITEM_RETURNED.get_list.Clear();
+                            this.TABLE_MODEL_ITEM_RETURNED.get_model.ResetBindings();
+
+                            this.load_deliveries();
+
+                            return true;
+                        }
+
+                        frmError _error = new frmError();
+                        var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                        foreach (String control in data_.Keys)
+                        {
+                            _error.errorList1.addError(String.Join(",", data_[control]));
+                        }
+
+                        _error.Show();
+
+
+                        return false;
+                    }
+
+                    return false;
+                });
+
+            }
+        }
+
+        private void dgvRTI_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0 && e.Button == MouseButtons.Right)
+            {
+                this.dgvRTI.Rows[e.RowIndex].Selected = true;
+                Rectangle rect = this.dgvRTI.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
+                cntRT.Show((Control)sender, rect.Left + e.X, rect.Top + e.Y);
+            }
         }
         
     }

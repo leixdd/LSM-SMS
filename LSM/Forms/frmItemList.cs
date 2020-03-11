@@ -137,6 +137,7 @@ namespace LSM.Forms
 
             if (user_ == DialogResult.No) {
                 e.Cancel = true;
+                return;
             }
 
 
@@ -179,6 +180,64 @@ namespace LSM.Forms
             {
                 this.submit();
             }
+        }
+
+        private void dgvDeliveryItems_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            DialogResult user_ = MessageBox.Show(this, "Are you sure you want to edit this item? [ " + dgvDeliveryItems["Name", e.RowIndex].Value.ToString() + " ]", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk, MessageBoxDefaultButton.Button2);
+
+            if (user_ == DialogResult.Yes)
+            {
+                try
+                {
+                    var item_request = new Models.JSON_ITEM_MODEL
+                    {
+                        item_cost = Double.Parse(dgvDeliveryItems["Cost", e.RowIndex].Value.ToString()),
+                        item_name = dgvDeliveryItems["Name", e.RowIndex].Value.ToString(),
+                        item_size = dgvDeliveryItems["Size", e.RowIndex].Value.ToString()
+                    };
+
+
+                    HttpServer.Post(Routes.R_ITEMS_EDIT + dgvDeliveryItems["ID", e.RowIndex].Value, new StringContent(JsonConvert.SerializeObject(item_request), Encoding.UTF8, "application/json"), (passed, results) =>
+                    {
+                        if (passed)
+                        {
+
+                            if (!bool.Parse(results.success))
+                            {
+                                frmError _error = new frmError();
+                                var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                                foreach (String control in data_.Keys)
+                                {
+                                    _error.errorList1.addError(String.Join(",", data_[control]));
+                                }
+
+                                _error.Show();
+
+
+                                return false;
+                            }
+
+                            frmSuccess success = new frmSuccess();
+                            success.setDesc(results.data.ToString());
+                            success.ShowDialog();
+
+
+                            return true;
+                        }
+                        return false;
+                    });
+
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(this, ex.Message, "Error");
+                }
+            }
+
+
+           
         }
     }
 }

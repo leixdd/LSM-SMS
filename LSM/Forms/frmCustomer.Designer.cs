@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards1 = new ns1.BunifuCards();
@@ -53,6 +54,9 @@
             this.bunifuSeparator1 = new ns1.BunifuSeparator();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.cntxSetup = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editThisItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removeThisItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
@@ -65,6 +69,7 @@
             this.bunifuCards3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).BeginInit();
+            this.cntxSetup.SuspendLayout();
             this.bunifuCards2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -196,6 +201,7 @@
             this.dgvDeliveryItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
+            this.dgvDeliveryItems.MultiSelect = false;
             this.dgvDeliveryItems.Name = "dgvDeliveryItems";
             this.dgvDeliveryItems.ReadOnly = true;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
@@ -204,6 +210,7 @@
             this.dgvDeliveryItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveryItems.Size = new System.Drawing.Size(710, 280);
             this.dgvDeliveryItems.TabIndex = 10;
+            this.dgvDeliveryItems.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDeliveryItems_CellMouseClick);
             this.dgvDeliveryItems.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDeliveryItems_UserDeletingRow);
             // 
             // bunifuSeparator3
@@ -366,6 +373,29 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Customer Information";
             // 
+            // cntxSetup
+            // 
+            this.cntxSetup.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editThisItemToolStripMenuItem,
+            this.removeThisItemToolStripMenuItem});
+            this.cntxSetup.Name = "cntxSetup";
+            this.cntxSetup.Size = new System.Drawing.Size(167, 48);
+            this.cntxSetup.Opening += new System.ComponentModel.CancelEventHandler(this.cntxSetup_Opening);
+            // 
+            // editThisItemToolStripMenuItem
+            // 
+            this.editThisItemToolStripMenuItem.Name = "editThisItemToolStripMenuItem";
+            this.editThisItemToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.editThisItemToolStripMenuItem.Text = "Edit this item";
+            this.editThisItemToolStripMenuItem.Click += new System.EventHandler(this.editThisItemToolStripMenuItem_Click);
+            // 
+            // removeThisItemToolStripMenuItem
+            // 
+            this.removeThisItemToolStripMenuItem.Name = "removeThisItemToolStripMenuItem";
+            this.removeThisItemToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.removeThisItemToolStripMenuItem.Text = "Remove this Item";
+            this.removeThisItemToolStripMenuItem.Click += new System.EventHandler(this.removeThisItemToolStripMenuItem_Click);
+            // 
             // bunifuCards2
             // 
             this.bunifuCards2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -484,6 +514,7 @@
             this.bunifuCards3.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).EndInit();
+            this.cntxSetup.ResumeLayout(false);
             this.bunifuCards2.ResumeLayout(false);
             this.bunifuCards2.PerformLayout();
             this.ResumeLayout(false);
@@ -523,5 +554,8 @@
         private System.Windows.Forms.Button btnItem;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip cntxSetup;
+        private System.Windows.Forms.ToolStripMenuItem editThisItemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removeThisItemToolStripMenuItem;
     }
 }

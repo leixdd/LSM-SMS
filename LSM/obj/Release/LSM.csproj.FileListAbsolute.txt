@@ -332,3 +332,10 @@ G:\LSM\LSM-SMS\LSM\bin\Release\zh-HANT\Microsoft.ReportViewer.WinForms.resources
 G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Models.Exportables.frmReport.resources
 G:\LSM\LSM-SMS\LSM\obj\Release\RdlCompile.cache
 G:\LSM\LSM-SMS\LSM\obj\Release\RdlCompile.compiled
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmEditItemSetup.resources
+F:\_lsm\LSM\bin\Release\Microsoft.ReportViewer.Common.resources.dll
+F:\_lsm\LSM\bin\Release\Microsoft.ReportViewer.DataVisualization.resources.dll
+F:\_lsm\LSM\bin\Release\Microsoft.ReportViewer.Design.resources.dll
+F:\_lsm\LSM\bin\Release\Microsoft.ReportViewer.WinForms.resources.dll
+F:\_lsm\LSM\obj\Release\LSM.Forms.frmEditItemSetup.resources
+F:\_lsm\LSM\obj\Release\LSM.Forms.frmNotifications.resources

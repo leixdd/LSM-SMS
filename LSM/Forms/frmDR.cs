@@ -21,6 +21,7 @@ namespace LSM.Forms
         protected static BindingList<Models.DR> dr_items = new BindingList<Models.DR>(list_dr);
 
         public long dto_id = 0;
+        public long item_id = 0;
 
         public Boolean isEditing = false;
 
@@ -141,7 +142,7 @@ namespace LSM.Forms
                     Item = txtItem.Text,
                     Quantity = (Double)numQuantity.Value,
                     Size = txtItemSize.Text,
-                    ItemID = Models.GlobalSettings.Selection_Item_ID,
+                    ItemID = (int) this.item_id,
                     UnitPrice = (Double)numUnitPrice.Value,
                     Amount = ((Double)numUnitPrice.Value * (Double)numQuantity.Value).ToString("C", CultureInfo.CurrentCulture)
                 });
@@ -184,7 +185,7 @@ namespace LSM.Forms
                 datetime_to_be_paid = dtpToBePaid.Value.ToString("yyyy-MM-dd"),
                 dr_list = list_dr,
                 dr_no = btnDRNumber.Text,
-                terms = (txtTerms.Text.Equals("") ? "No Input" : txtTerms.Text),
+                terms = txtTerms.Value.ToString(),
                 tin = (txtTin.Text.Equals("") ? "No Input" : txtTin.Text),
                 updated_by = Models.GlobalSettings.CURRENT_USER.user_id.ToString(), //getting the current user
                 total_amount = total_amount_generate(list_dr),
@@ -268,6 +269,22 @@ namespace LSM.Forms
             
             dto_id);
             si.ShowDialog();
+
+            this.item_id = Models.GlobalSettings.Selection_II_ID;
+            Models.GlobalSettings.Selection_II_ID = 0;
+
+        }
+
+        private void txtTerms_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DR_DATE = dtpDate.Value;
+            dtpToBePaid.Value = DR_DATE.AddDays((Double)txtTerms.Value);
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime DR_DATE = dtpDate.Value;
+            dtpToBePaid.Value = DR_DATE.AddDays((Double)txtTerms.Value);
         }
     }
 }

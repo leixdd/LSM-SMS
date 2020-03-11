@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LSM.Models
 {
-    public class TABLE_BILLING_MODEL : BaseTable
+    public class TABLE_BILLING_MODEL_RT : BaseTable
     {
 
         public long ID

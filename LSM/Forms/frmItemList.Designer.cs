@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards2 = new ns1.BunifuCards();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvDeliveryItems = new System.Windows.Forms.DataGridView();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtItemSize = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnClearFields = new System.Windows.Forms.Button();
             this.btnTransaction = new System.Windows.Forms.Button();
             this.numUnitPrice = new System.Windows.Forms.NumericUpDown();
@@ -45,8 +47,6 @@
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.lblDesc = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.txtItemSize = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.bunifuCards2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveryItems)).BeginInit();
@@ -116,23 +116,24 @@
             this.dgvDeliveryItems.AllowUserToAddRows = false;
             this.dgvDeliveryItems.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeliveryItems.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDeliveryItems.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeliveryItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
             this.dgvDeliveryItems.Name = "dgvDeliveryItems";
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDeliveryItems.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDeliveryItems.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDeliveryItems.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveryItems.Size = new System.Drawing.Size(811, 436);
             this.dgvDeliveryItems.TabIndex = 10;
+            this.dgvDeliveryItems.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDeliveryItems_CellEndEdit);
             this.dgvDeliveryItems.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDeliveryItems_UserDeletingRow);
             // 
             // groupBox2
@@ -152,6 +153,25 @@
             this.groupBox2.TabIndex = 25;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Item Control";
+            // 
+            // txtItemSize
+            // 
+            this.txtItemSize.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtItemSize.Location = new System.Drawing.Point(109, 85);
+            this.txtItemSize.Name = "txtItemSize";
+            this.txtItemSize.Size = new System.Drawing.Size(232, 24);
+            this.txtItemSize.TabIndex = 22;
+            this.txtItemSize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemName_KeyDown);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 88);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 19);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Item Size : ";
             // 
             // btnClearFields
             // 
@@ -260,25 +280,6 @@
             this.label8.Size = new System.Drawing.Size(214, 32);
             this.label8.TabIndex = 3;
             this.label8.Text = "ITEM DATABASE";
-            // 
-            // txtItemSize
-            // 
-            this.txtItemSize.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtItemSize.Location = new System.Drawing.Point(109, 85);
-            this.txtItemSize.Name = "txtItemSize";
-            this.txtItemSize.Size = new System.Drawing.Size(232, 24);
-            this.txtItemSize.TabIndex = 22;
-            this.txtItemSize.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtItemName_KeyDown);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 88);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 19);
-            this.label2.TabIndex = 23;
-            this.label2.Text = "Item Size : ";
             // 
             // frmItemList
             // 

@@ -10,11 +10,27 @@ using System.Windows.Forms;
 
 namespace LSM.Utilities
 {
+
     public class HttpServer
     {
-        public static async void Get(string route, Func<bool, Response, bool> function)
+
+        private static frmWebRes webRes;
+
+        public static frmWebRes checkWR()
+        {
+            if (webRes == null)
+            {
+                webRes = new frmWebRes();
+            }
+
+            return webRes;
+        }
+
+        public static async void Get(string route, Func<bool, Response, bool> function, Boolean needLoader = true)
         {
             HttpClient httpClient = new HttpClient();
+            frmWebRes res = checkWR();
+
             var result = "";
             var to_be_res = new Response
             {
@@ -22,9 +38,11 @@ namespace LSM.Utilities
                 success = "false"
             };
 
-            frmWebRes res = new frmWebRes();
-            res.TopMost = true;
-            res.Show();
+            if(needLoader)
+            {
+                res.TopMost = true;
+                res.Show();
+            }
 
 
             Boolean rules_passed = false;
@@ -41,6 +59,8 @@ namespace LSM.Utilities
                 }
                 catch (Exception ServerException)
                 {
+                    Console.WriteLine(ServerException);
+                    Console.WriteLine(result);
                     MessageBox.Show("Server Error");
                     rules_passed = false;
                 }
@@ -53,7 +73,10 @@ namespace LSM.Utilities
                 rules_passed = false;
             }
 
-            res.Close();
+            if (needLoader)
+            {
+                res.Hide();
+            }
 
             function(rules_passed, to_be_res);
 

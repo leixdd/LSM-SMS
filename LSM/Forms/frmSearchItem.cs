@@ -216,6 +216,11 @@ namespace LSM.Forms
 
             TABLE_MODEL.get_model.ResetBindings();
             resetDGV();
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.dgvDeliveryItems.Focus();
+            }
         }
 
         private void dgvDeliveryItems_DoubleClick(object sender, EventArgs e)
@@ -232,7 +237,8 @@ namespace LSM.Forms
                 ((System.Windows.Forms.NumericUpDown)selection_model.control[1]).Value = Decimal.Parse(dgvDeliveryItems.SelectedRows[0].Cells["Cost"].Value.ToString());
                 ((System.Windows.Forms.NumericUpDown)selection_model.control[3]).Value = Decimal.Parse(dgvDeliveryItems.SelectedRows[0].Cells["Cost"].Value.ToString());
                 selection_model.control[2].Text = dgvDeliveryItems.SelectedRows[0].Cells["Size"].Value.ToString();
-                Models.GlobalSettings.Selection_Item_ID = int.Parse(dgvDeliveryItems.SelectedRows[0].Cells["ID"].Value.ToString());
+                Models.GlobalSettings.Selection_II_ID = int.Parse(dgvDeliveryItems.SelectedRows[0].Cells["ID"].Value.ToString());
+                Console.WriteLine(Models.GlobalSettings.Selection_II_ID);
             }
 
         }
@@ -250,6 +256,16 @@ namespace LSM.Forms
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dgvDeliveryItems_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                selection();
+                e.Handled = true;
+                this.Close();
+            }
         }
     }
 }

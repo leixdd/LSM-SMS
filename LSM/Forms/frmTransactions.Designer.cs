@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards3 = new ns1.BunifuCards();
             this.button3 = new System.Windows.Forms.Button();
             this.btnItem = new System.Windows.Forms.Button();
@@ -65,6 +68,16 @@
             this.label5 = new System.Windows.Forms.Label();
             this.bunifuSeparator4 = new ns1.BunifuSeparator();
             this.label8 = new System.Windows.Forms.Label();
+            this.bunifuCards4 = new ns1.BunifuCards();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvRTI = new System.Windows.Forms.DataGridView();
+            this.bunifuSeparator5 = new ns1.BunifuSeparator();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cntBilling = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.setAsAReturnedItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cntRT = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.bringBackToBillingListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bunifuCards3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBilling)).BeginInit();
@@ -73,12 +86,15 @@
             this.bunifuCards2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveries)).BeginInit();
             this.cashGroup.SuspendLayout();
+            this.bunifuCards4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRTI)).BeginInit();
+            this.cntBilling.SuspendLayout();
+            this.cntRT.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuCards3
             // 
-            this.bunifuCards3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuCards3.BackColor = System.Drawing.Color.White;
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
@@ -94,7 +110,7 @@
             this.bunifuCards3.Name = "bunifuCards3";
             this.bunifuCards3.RightSahddow = true;
             this.bunifuCards3.ShadowDepth = 20;
-            this.bunifuCards3.Size = new System.Drawing.Size(748, 305);
+            this.bunifuCards3.Size = new System.Drawing.Size(477, 305);
             this.bunifuCards3.TabIndex = 50;
             // 
             // button3
@@ -104,11 +120,11 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(438, 18);
+            this.button3.Location = new System.Drawing.Point(250, 11);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(144, 31);
+            this.button3.Size = new System.Drawing.Size(109, 30);
             this.button3.TabIndex = 32;
-            this.button3.Text = "Print SOA";
+            this.button3.Text = "Print DR";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -119,9 +135,9 @@
             this.btnItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItem.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnItem.ForeColor = System.Drawing.Color.White;
-            this.btnItem.Location = new System.Drawing.Point(588, 18);
+            this.btnItem.Location = new System.Drawing.Point(365, 11);
             this.btnItem.Name = "btnItem";
-            this.btnItem.Size = new System.Drawing.Size(144, 31);
+            this.btnItem.Size = new System.Drawing.Size(99, 30);
             this.btnItem.TabIndex = 31;
             this.btnItem.Text = "Add Item";
             this.btnItem.UseVisualStyleBackColor = false;
@@ -136,7 +152,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(14, 78);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(721, 218);
+            this.groupBox3.Size = new System.Drawing.Size(450, 218);
             this.groupBox3.TabIndex = 30;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Delivery Item List";
@@ -146,24 +162,26 @@
             this.dgvBilling.AllowUserToAddRows = false;
             this.dgvBilling.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvBilling.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvBilling.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvBilling.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvBilling.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvBilling.Location = new System.Drawing.Point(3, 18);
+            this.dgvBilling.MultiSelect = false;
             this.dgvBilling.Name = "dgvBilling";
             this.dgvBilling.ReadOnly = true;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvBilling.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvBilling.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvBilling.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBilling.Size = new System.Drawing.Size(715, 197);
+            this.dgvBilling.Size = new System.Drawing.Size(444, 197);
             this.dgvBilling.TabIndex = 10;
+            this.dgvBilling.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvBilling_CellMouseClick);
             this.dgvBilling.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvBilling_UserDeletingRow);
             // 
             // bunifuSeparator3
@@ -218,7 +236,7 @@
             this.bunifuCards1.Name = "bunifuCards1";
             this.bunifuCards1.RightSahddow = true;
             this.bunifuCards1.ShadowDepth = 20;
-            this.bunifuCards1.Size = new System.Drawing.Size(748, 187);
+            this.bunifuCards1.Size = new System.Drawing.Size(822, 187);
             this.bunifuCards1.TabIndex = 51;
             // 
             // button1
@@ -228,7 +246,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(588, 19);
+            this.button1.Location = new System.Drawing.Point(662, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(144, 31);
             this.button1.TabIndex = 32;
@@ -243,21 +261,21 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvChequeList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvChequeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvChequeList.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvChequeList.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvChequeList.Location = new System.Drawing.Point(12, 78);
             this.dgvChequeList.Name = "dgvChequeList";
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvChequeList.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvChequeList.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvChequeList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvChequeList.Size = new System.Drawing.Size(721, 94);
+            this.dgvChequeList.Size = new System.Drawing.Size(795, 94);
             this.dgvChequeList.TabIndex = 25;
             // 
             // bunifuSeparator1
@@ -322,20 +340,20 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvDeliveries.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDeliveries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDeliveries.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDeliveries.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvDeliveries.Location = new System.Drawing.Point(12, 78);
             this.dgvDeliveries.Name = "dgvDeliveries";
             this.dgvDeliveries.ReadOnly = true;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvDeliveries.RowsDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvDeliveries.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvDeliveries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDeliveries.Size = new System.Drawing.Size(353, 553);
             this.dgvDeliveries.TabIndex = 25;
@@ -412,7 +430,7 @@
             this.cashGroup.Name = "cashGroup";
             this.cashGroup.RightSahddow = true;
             this.cashGroup.ShadowDepth = 20;
-            this.cashGroup.Size = new System.Drawing.Size(748, 142);
+            this.cashGroup.Size = new System.Drawing.Size(822, 142);
             this.cashGroup.TabIndex = 53;
             // 
             // txtAmountReceived
@@ -516,11 +534,133 @@
             this.label8.TabIndex = 3;
             this.label8.Text = "Delivery Information";
             // 
+            // bunifuCards4
+            // 
+            this.bunifuCards4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuCards4.BackColor = System.Drawing.Color.White;
+            this.bunifuCards4.BorderRadius = 5;
+            this.bunifuCards4.BottomSahddow = true;
+            this.bunifuCards4.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards4.Controls.Add(this.groupBox1);
+            this.bunifuCards4.Controls.Add(this.bunifuSeparator5);
+            this.bunifuCards4.Controls.Add(this.label11);
+            this.bunifuCards4.Controls.Add(this.label13);
+            this.bunifuCards4.LeftSahddow = false;
+            this.bunifuCards4.Location = new System.Drawing.Point(881, 194);
+            this.bunifuCards4.Name = "bunifuCards4";
+            this.bunifuCards4.RightSahddow = true;
+            this.bunifuCards4.ShadowDepth = 20;
+            this.bunifuCards4.Size = new System.Drawing.Size(339, 305);
+            this.bunifuCards4.TabIndex = 54;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.dgvRTI);
+            this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(14, 78);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(312, 218);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Returned Item List";
+            // 
+            // dgvRTI
+            // 
+            this.dgvRTI.AllowUserToAddRows = false;
+            this.dgvRTI.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRTI.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRTI.DefaultCellStyle = dataGridViewCellStyle7;
+            this.dgvRTI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvRTI.Location = new System.Drawing.Point(3, 18);
+            this.dgvRTI.Name = "dgvRTI";
+            this.dgvRTI.ReadOnly = true;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvRTI.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.dgvRTI.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvRTI.Size = new System.Drawing.Size(306, 197);
+            this.dgvRTI.TabIndex = 10;
+            this.dgvRTI.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvRTI_CellMouseClick);
+            // 
+            // bunifuSeparator5
+            // 
+            this.bunifuSeparator5.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuSeparator5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(105)))), ((int)(((byte)(105)))));
+            this.bunifuSeparator5.LineThickness = 3;
+            this.bunifuSeparator5.Location = new System.Drawing.Point(15, 64);
+            this.bunifuSeparator5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bunifuSeparator5.Name = "bunifuSeparator5";
+            this.bunifuSeparator5.Size = new System.Drawing.Size(373, 10);
+            this.bunifuSeparator5.TabIndex = 24;
+            this.bunifuSeparator5.Transparency = 255;
+            this.bunifuSeparator5.Vertical = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 44);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(147, 19);
+            this.label11.TabIndex = 4;
+            this.label11.Text = "List of returned items";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(8, 10);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(175, 32);
+            this.label13.TabIndex = 3;
+            this.label13.Text = "Return Items";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // cntBilling
+            // 
+            this.cntBilling.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.setAsAReturnedItemToolStripMenuItem});
+            this.cntBilling.Name = "cntBilling";
+            this.cntBilling.Size = new System.Drawing.Size(189, 26);
+            // 
+            // setAsAReturnedItemToolStripMenuItem
+            // 
+            this.setAsAReturnedItemToolStripMenuItem.Name = "setAsAReturnedItemToolStripMenuItem";
+            this.setAsAReturnedItemToolStripMenuItem.Size = new System.Drawing.Size(188, 22);
+            this.setAsAReturnedItemToolStripMenuItem.Text = "Set as a returned Item";
+            this.setAsAReturnedItemToolStripMenuItem.Click += new System.EventHandler(this.setAsAReturnedItemToolStripMenuItem_Click);
+            // 
+            // cntRT
+            // 
+            this.cntRT.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bringBackToBillingListToolStripMenuItem});
+            this.cntRT.Name = "cntRT";
+            this.cntRT.Size = new System.Drawing.Size(199, 26);
+            // 
+            // bringBackToBillingListToolStripMenuItem
+            // 
+            this.bringBackToBillingListToolStripMenuItem.Name = "bringBackToBillingListToolStripMenuItem";
+            this.bringBackToBillingListToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.bringBackToBillingListToolStripMenuItem.Text = "Bring back to billing list";
+            this.bringBackToBillingListToolStripMenuItem.Click += new System.EventHandler(this.bringBackToBillingListToolStripMenuItem_Click);
+            // 
             // frmTransactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1158, 704);
+            this.ClientSize = new System.Drawing.Size(1232, 704);
+            this.Controls.Add(this.bunifuCards4);
             this.Controls.Add(this.cashGroup);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.bunifuCards2);
@@ -542,6 +682,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvDeliveries)).EndInit();
             this.cashGroup.ResumeLayout(false);
             this.cashGroup.PerformLayout();
+            this.bunifuCards4.ResumeLayout(false);
+            this.bunifuCards4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRTI)).EndInit();
+            this.cntBilling.ResumeLayout(false);
+            this.cntRT.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -579,5 +725,15 @@
         private System.Windows.Forms.TextBox txtDeliveryAmount;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button3;
+        private ns1.BunifuCards bunifuCards4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView dgvRTI;
+        private ns1.BunifuSeparator bunifuSeparator5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ContextMenuStrip cntBilling;
+        private System.Windows.Forms.ToolStripMenuItem setAsAReturnedItemToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip cntRT;
+        private System.Windows.Forms.ToolStripMenuItem bringBackToBillingListToolStripMenuItem;
     }
 }
