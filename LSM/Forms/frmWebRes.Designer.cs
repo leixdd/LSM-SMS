@@ -57,6 +57,7 @@
             this.formLoader1.Name = "formLoader1";
             this.formLoader1.Size = new System.Drawing.Size(366, 212);
             this.formLoader1.TabIndex = 1;
+            this.formLoader1.Load += new System.EventHandler(this.formLoader1_Load);
             // 
             // frmWebRes
             // 
@@ -69,6 +70,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmWebRes";
             this.TopMost = true;
+            this.Shown += new System.EventHandler(this.frmWebRes_Shown);
             this.bunifuCards1.ResumeLayout(false);
             this.ResumeLayout(false);
 

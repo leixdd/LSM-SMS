@@ -404,3 +404,4 @@ F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.Design.resources.dll
 F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.WinForms.resources.dll
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmEditItemSetup.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmNotifications.resources
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmNotifications.resources

@@ -12,6 +12,7 @@ namespace LSM.Forms
 {
     public partial class frmWebRes : Form
     {
+
         public frmWebRes()
         {
             InitializeComponent();
@@ -23,6 +24,18 @@ namespace LSM.Forms
             {
                 Utilities.AllowFormDraggable.applyFormDrag(Handle);
             }
+        }
+
+        public Boolean viewRes(Func<bool> function) {
+            return function();
+        }
+
+        private void formLoader1_Load(object sender, EventArgs e)
+        {
+        }
+
+        private void frmWebRes_Shown(object sender, EventArgs e)
+        {
         }
     }
 }

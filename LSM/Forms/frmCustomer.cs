@@ -107,7 +107,8 @@ namespace LSM.Forms
 
         private void getBinds(int id)
         {
-            TABLE_MODEL.get_list.Clear();
+            TABLE_MODEL.get_model.Clear();
+            this.Enabled = false;
 
             HttpServer.Get(Utilities.Routes.R_CUSTOMERS_BIND_ITEM_GET + id.ToString(), (passed, results) =>
             {
@@ -140,14 +141,18 @@ namespace LSM.Forms
 
                         //resetDGV();
 
+                        this.Enabled = true;
                         return true;
                     }
 
+                    this.Enabled = true;
                     return false;
                 }
 
+                this.Enabled = true;
                 return false;
             });
+
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -267,6 +272,11 @@ namespace LSM.Forms
             editItem.item_size = e.Cells["Size"].Value.ToString();
             editItem.item_discount = Decimal.Parse(e.Cells["Discount"].Value.ToString());
             editItem.ShowDialog();
+        }
+
+        private void dgvDeliveryItems_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+             
         }
     }
 

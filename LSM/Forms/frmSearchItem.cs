@@ -34,7 +34,7 @@ namespace LSM.Forms
 
         protected class CUSTOMER_BINDED_ITEMS
         {
-            public long id;
+            public long item_id;
             public string item_name;
             public string item_size;
             public double selling_price;
@@ -149,7 +149,7 @@ namespace LSM.Forms
                         {
                             var model = new Models.TABLE_ITEM_LIST
                             {
-                                ID = item.id,
+                                ID = item.item_id,
                                 Name = item.item_name,
                                 Size = item.item_size,
                                 Cost = (item.selling_price - (item.selling_price * (item.discount / 100))),

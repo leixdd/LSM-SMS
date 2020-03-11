@@ -211,6 +211,7 @@
             this.dgvDeliveryItems.Size = new System.Drawing.Size(710, 280);
             this.dgvDeliveryItems.TabIndex = 10;
             this.dgvDeliveryItems.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvDeliveryItems_CellMouseClick);
+            this.dgvDeliveryItems.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvDeliveryItems_DataError);
             this.dgvDeliveryItems.UserDeletingRow += new System.Windows.Forms.DataGridViewRowCancelEventHandler(this.dgvDeliveryItems_UserDeletingRow);
             // 
             // bunifuSeparator3

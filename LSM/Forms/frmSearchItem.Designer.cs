@@ -136,6 +136,7 @@
             this.dgvDeliveryItems.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDeliveryItems.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDeliveryItems.Location = new System.Drawing.Point(3, 18);
+            this.dgvDeliveryItems.MultiSelect = false;
             this.dgvDeliveryItems.Name = "dgvDeliveryItems";
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HotTrack;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;

@@ -14,23 +14,10 @@ namespace LSM.Utilities
     public class HttpServer
     {
 
-        private static frmWebRes webRes;
-
-        public static frmWebRes checkWR()
-        {
-            if (webRes == null)
-            {
-                webRes = new frmWebRes();
-            }
-
-            return webRes;
-        }
-
         public static async void Get(string route, Func<bool, Response, bool> function, Boolean needLoader = true)
         {
             HttpClient httpClient = new HttpClient();
-            frmWebRes res = checkWR();
-
+            frmWebRes res = new frmWebRes();
             var result = "";
             var to_be_res = new Response
             {
@@ -38,24 +25,24 @@ namespace LSM.Utilities
                 success = "false"
             };
 
-            if(needLoader)
+            if (needLoader)
             {
                 res.TopMost = true;
                 res.Show();
             }
 
 
+            var data_retrieved = await httpClient.GetAsync(route);
+            result = data_retrieved.Content.ReadAsStringAsync().Result;
+
             Boolean rules_passed = false;
 
             try
             {
-                var data_retrieved = await httpClient.GetAsync(route);
-                result = data_retrieved.Content.ReadAsStringAsync().Result;
-                rules_passed = true;
-
                 try
                 {
                     to_be_res = JsonConvert.DeserializeObject<Utilities.Response>(result);
+                    rules_passed = true;
                 }
                 catch (Exception ServerException)
                 {
@@ -73,10 +60,8 @@ namespace LSM.Utilities
                 rules_passed = false;
             }
 
-            if (needLoader)
-            {
-                res.Hide();
-            }
+
+            res.Close();
 
             function(rules_passed, to_be_res);
 
