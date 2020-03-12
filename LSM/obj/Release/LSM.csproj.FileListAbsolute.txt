@@ -339,3 +339,4 @@ F:\_lsm\LSM\bin\Release\Microsoft.ReportViewer.WinForms.resources.dll
 F:\_lsm\LSM\obj\Release\LSM.Forms.frmEditItemSetup.resources
 F:\_lsm\LSM\obj\Release\LSM.Forms.frmNotifications.resources
 G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmNotifications.resources
+F:\_lsm\LSM\obj\Release\LSM.csprojAssemblyReference.cache
