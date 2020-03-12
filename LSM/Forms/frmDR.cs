@@ -29,7 +29,6 @@ namespace LSM.Forms
         {
             InitializeComponent();
             dgvDeliveryItems.DataSource = new BindingSource(dr_items, null);
-            generate_combo_units();
             resetDGV();
         }
 
@@ -37,11 +36,6 @@ namespace LSM.Forms
         {
             isEditing = true;
             DRNO_Value = dr_no;
-        }
-
-        protected void generate_combo_units()
-        {
-
         }
 
         protected int unit_index(string unit)
@@ -129,7 +123,7 @@ namespace LSM.Forms
         {
             Boolean passed = true;
 
-            if (txtItem.Text.Equals(""))
+            if (txtItem.Text.Equals("") || this.item_id == 0)
             {
                 passed = false;
                 MessageBox.Show(this, "Item was empty", "Error in adding new item into Sales Items", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -146,11 +140,22 @@ namespace LSM.Forms
                     UnitPrice = (Double)numUnitPrice.Value,
                     Amount = ((Double)numUnitPrice.Value * (Double)numQuantity.Value).ToString("C", CultureInfo.CurrentCulture)
                 });
-
-
+                
                 dr_items.ResetBindings();
                 resetDGV();
+                lblTA.Text = updateTotal().ToString("C", CultureInfo.CurrentCulture);
             }
+        }
+
+        private Double updateTotal() {
+            Double total_amount_ = 0;
+
+            foreach (Models.DR dritem in list_dr)
+            {
+                total_amount_ += (dritem.Quantity * dritem.UnitPrice);
+            }
+
+            return total_amount_;
         }
 
         protected void resetDGV()
@@ -257,6 +262,17 @@ namespace LSM.Forms
             SearchCust.ShowDialog();
             this.dto_id = Models.GlobalSettings.Selection_Item_ID;
             Models.GlobalSettings.Selection_Item_ID = 0;
+            resetSelection();
+        }
+
+        private void resetSelection() {
+            dr_items.Clear();
+            txtItem.Clear();
+            numQuantity.Value = 1;
+            txtItemSize.Clear();
+            this.item_id = 0;
+            numUnitPrice.Value = 0;
+            numIC.Value = 0;
         }
 
         private void txtItem_MouseClick(object sender, MouseEventArgs e)
@@ -285,6 +301,11 @@ namespace LSM.Forms
         {
             DateTime DR_DATE = dtpDate.Value;
             dtpToBePaid.Value = DR_DATE.AddDays((Double)txtTerms.Value);
+        }
+
+        private void lblTA_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -264,7 +264,6 @@ F:\_lsm\LSM\obj\Release\LSM.csproj.CoreCompileInputs.cache
 F:\_lsm\LSM\obj\Release\LSM.csproj.CopyComplete
 F:\_lsm\LSM\obj\Release\LSM.exe
 F:\_lsm\LSM\obj\Release\LSM.pdb
-F:\_lsm\LSM\obj\Release\LSM.csprojAssemblyReference.cache
 G:\LSM\LSM-SMS\LSM\bin\Release\SqlServerTypes\x64\msvcr120.dll
 G:\LSM\LSM-SMS\LSM\bin\Release\SqlServerTypes\x64\SqlServerSpatial140.dll
 G:\LSM\LSM-SMS\LSM\bin\Release\SqlServerTypes\x86\msvcr120.dll

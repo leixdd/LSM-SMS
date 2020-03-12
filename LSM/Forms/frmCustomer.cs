@@ -263,7 +263,10 @@ namespace LSM.Forms
 
         private void editThisItemToolStripMenuItem_Click(object sender, EventArgs ex)
         {
-            
+
+
+
+            var _id = list_object[lstCustomers.SelectedIndex].id;
             var e = this.dgvDeliveryItems.SelectedRows[0];
             frmEditItemSetup editItem = new frmEditItemSetup();
             editItem.bind_id = (long) e.Cells["BindID"].Value;
@@ -272,11 +275,11 @@ namespace LSM.Forms
             editItem.item_size = e.Cells["Size"].Value.ToString();
             editItem.item_discount = Decimal.Parse(e.Cells["Discount"].Value.ToString());
             editItem.ShowDialog();
+            this.getBinds(_id);
         }
 
         private void dgvDeliveryItems_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-             
         }
     }
 
