@@ -30,15 +30,19 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.tABLEBILLINGMODELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.tABLEBILLINGMODELBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // tABLEBILLINGMODELBindingSource
+            // 
+            this.tABLEBILLINGMODELBindingSource.DataSource = typeof(LSM.Models.TABLE_BILLING_MODEL);
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource1.Name = "DataSet1";
+            reportDataSource1.Name = "DataSet2";
             reportDataSource1.Value = this.tABLEBILLINGMODELBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "LSM.Models.Exportables.SOA.rdlc";
@@ -47,10 +51,6 @@
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(800, 450);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // tABLEBILLINGMODELBindingSource
-            // 
-            this.tABLEBILLINGMODELBindingSource.DataSource = typeof(LSM.Models.TABLE_BILLING_MODEL);
             // 
             // frmReport
             // 

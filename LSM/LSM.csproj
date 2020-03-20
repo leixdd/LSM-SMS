@@ -427,6 +427,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\LSM.Models.TABLE_BILLING_MODEL.datasource" />
+    <None Include="Properties\DataSources\LSM.Models.TABLE_DELIVERIES_LIST.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -315,6 +315,11 @@ namespace LSM.Forms
         private void txtSearch_Leave(object sender, EventArgs e)
         {
         }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 
     class rDF
