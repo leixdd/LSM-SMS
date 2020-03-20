@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Net.Http;
 using System.Reflection;
@@ -321,7 +322,7 @@ namespace LSM.Forms
             CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
 
             Models.Exportables.frmReport rpt = new Models.Exportables.frmReport();
-            rpt.setDS(TABLE_MODEL_ITEM.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address, dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString());
+            //rpt.setDS(TABLE_MODEL_ITEM.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address, dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString());
             rpt.ShowDialog();
         }
 
@@ -474,6 +475,26 @@ namespace LSM.Forms
                 this.dgvRTI.Rows[e.RowIndex].Selected = true;
                 Rectangle rect = this.dgvRTI.GetCellDisplayRectangle(e.ColumnIndex, e.RowIndex, true);
                 cntRT.Show((Control)sender, rect.Left + e.X, rect.Top + e.Y);
+            }
+        }
+
+        private void btnPrintDR_Click(object sender, EventArgs e)
+        {
+            if (dgvDeliveries.Rows.Count > 0)
+            {
+                CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
+
+                Models.Exportables.frmReport rpt = new Models.Exportables.frmReport();
+                Double totalAmount = 0;
+
+                foreach (Models.TABLE_DELIVERIES_LIST dev in TABLE_MODEL_DELIVERIES.get_list)
+                {
+                    totalAmount += dev.TotalAmount;
+                }
+
+                String tA = totalAmount.ToString("C", CultureInfo.CurrentCulture);
+                rpt.setDS(TABLE_MODEL_DELIVERIES.get_list, cm.customer_name, cm.company_name, cm.contact_number, cm.company_address, tA);
+                rpt.ShowDialog();
             }
         }
         

@@ -38,7 +38,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuCards3 = new ns1.BunifuCards();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnItem = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvBilling = new System.Windows.Forms.DataGridView();
@@ -52,6 +51,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuCards2 = new ns1.BunifuCards();
+            this.btnPrintDR = new System.Windows.Forms.Button();
             this.dgvDeliveries = new System.Windows.Forms.DataGridView();
             this.bunifuSeparator2 = new ns1.BunifuSeparator();
             this.label2 = new System.Windows.Forms.Label();
@@ -99,7 +99,6 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.DodgerBlue;
-            this.bunifuCards3.Controls.Add(this.button3);
             this.bunifuCards3.Controls.Add(this.btnItem);
             this.bunifuCards3.Controls.Add(this.groupBox3);
             this.bunifuCards3.Controls.Add(this.bunifuSeparator3);
@@ -112,21 +111,6 @@
             this.bunifuCards3.ShadowDepth = 20;
             this.bunifuCards3.Size = new System.Drawing.Size(477, 305);
             this.bunifuCards3.TabIndex = 50;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(250, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(109, 30);
-            this.button3.TabIndex = 32;
-            this.button3.Text = "Print DR";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // btnItem
             // 
@@ -319,6 +303,7 @@
             this.bunifuCards2.BorderRadius = 5;
             this.bunifuCards2.BottomSahddow = true;
             this.bunifuCards2.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards2.Controls.Add(this.btnPrintDR);
             this.bunifuCards2.Controls.Add(this.dgvDeliveries);
             this.bunifuCards2.Controls.Add(this.bunifuSeparator2);
             this.bunifuCards2.Controls.Add(this.label2);
@@ -330,6 +315,21 @@
             this.bunifuCards2.ShadowDepth = 20;
             this.bunifuCards2.Size = new System.Drawing.Size(380, 646);
             this.bunifuCards2.TabIndex = 52;
+            // 
+            // btnPrintDR
+            // 
+            this.btnPrintDR.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnPrintDR.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.btnPrintDR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrintDR.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPrintDR.ForeColor = System.Drawing.Color.White;
+            this.btnPrintDR.Location = new System.Drawing.Point(256, 17);
+            this.btnPrintDR.Name = "btnPrintDR";
+            this.btnPrintDR.Size = new System.Drawing.Size(109, 30);
+            this.btnPrintDR.TabIndex = 33;
+            this.btnPrintDR.Text = "Print DR";
+            this.btnPrintDR.UseVisualStyleBackColor = false;
+            this.btnPrintDR.Click += new System.EventHandler(this.btnPrintDR_Click);
             // 
             // dgvDeliveries
             // 
@@ -724,7 +724,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtDeliveryAmount;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button3;
         private ns1.BunifuCards bunifuCards4;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvRTI;
@@ -735,5 +734,6 @@
         private System.Windows.Forms.ToolStripMenuItem setAsAReturnedItemToolStripMenuItem;
         private System.Windows.Forms.ContextMenuStrip cntRT;
         private System.Windows.Forms.ToolStripMenuItem bringBackToBillingListToolStripMenuItem;
+        private System.Windows.Forms.Button btnPrintDR;
     }
 }

@@ -102,7 +102,6 @@ G:\LSM\LSM-SMS\LSM\bin\Release\Microsoft.VisualBasic.PowerPacks.dll
 G:\LSM\LSM-SMS\LSM\bin\Release\Newtonsoft.Json.dll
 G:\LSM\LSM-SMS\LSM\bin\Release\INIFileParser.xml
 G:\LSM\LSM-SMS\LSM\bin\Release\Newtonsoft.Json.xml
-G:\LSM\LSM-SMS\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache
 G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmAddCustomer.resources
 G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmAddItemSetup.resources
 G:\LSM\LSM-SMS\LSM\obj\Release\LSM.Forms.frmCustomer.resources

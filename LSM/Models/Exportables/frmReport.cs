@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace LSM.Models.Exportables
             this.reportViewer1.RefreshReport();
         }
 
-        public void setDS(List<TABLE_BILLING_MODEL> ds, String customer_name, String company_name, String contact_number, String company_address, String total_amount)
+        public void setDS(List<TABLE_DELIVERIES_LIST> ds, String customer_name, String company_name, String contact_number, String company_address, String total_amount)
         {
             tABLEBILLINGMODELBindingSource.DataSource = ds;
             this.reportViewer1.LocalReport.SetParameters(new ReportParameter[] {
