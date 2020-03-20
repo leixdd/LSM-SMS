@@ -17,11 +17,11 @@ namespace LSM.Forms
     public partial class frmCustomer : Form
     {
         private List<rDF> list_object;
+        private List<rDF> customer_list;
 
         protected Models.DGV_MODEL<Models.TABLE_ITEM_BIND_LIST> TABLE_MODEL = new Models.DGV_MODEL<Models.TABLE_ITEM_BIND_LIST>();
 
         protected List<Models.TABLE_ITEM_BIND_LIST> temp_list = new List<Models.TABLE_ITEM_BIND_LIST>();
-        
 
         public frmCustomer()
         {
@@ -48,11 +48,12 @@ namespace LSM.Forms
                     {
                         var rs_object = JsonConvert.DeserializeObject<List<rDF>>(results.data.ToString());
                         list_object = rs_object;
+                        customer_list = list_object;
                         foreach (var data in rs_object)
                         {
-                            lstCustomers.Items.Add(data.customer_name + " - " + data.company_name);
+                            String cm = data.id + "|" +data.customer_name + " - " + data.company_name;
+                            lstCustomers.Items.Add(cm);
                         }
-
                         lstCustomers.SelectedIndex = 0;
                         return true;
                     }
@@ -138,7 +139,6 @@ namespace LSM.Forms
                         }
 
                         TABLE_MODEL.get_model.ResetBindings();
-
                         //resetDGV();
 
                         this.Enabled = true;
@@ -263,7 +263,10 @@ namespace LSM.Forms
 
         private void editThisItemToolStripMenuItem_Click(object sender, EventArgs ex)
         {
-            
+
+
+
+            var _id = list_object[lstCustomers.SelectedIndex].id;
             var e = this.dgvDeliveryItems.SelectedRows[0];
             frmEditItemSetup editItem = new frmEditItemSetup();
             editItem.bind_id = (long) e.Cells["BindID"].Value;
@@ -272,11 +275,45 @@ namespace LSM.Forms
             editItem.item_size = e.Cells["Size"].Value.ToString();
             editItem.item_discount = Decimal.Parse(e.Cells["Discount"].Value.ToString());
             editItem.ShowDialog();
+            this.getBinds(_id);
         }
 
         private void dgvDeliveryItems_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
-             
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
+        {
+        }
+
+        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
+        {
+            this.TABLE_MODEL.get_model.Clear();
+
+            var list = customer_list.FindAll(data => (data.id + "|" + data.customer_name + " " + data.company_name).ToLower().Contains(txtSearch.Text.ToLower()));
+
+            lstCustomers.Items.Clear();
+            list_object = list;
+
+            foreach (var data in list_object)
+            {
+                String cm = data.id + "|" + data.customer_name + " - " + data.company_name;
+                lstCustomers.Items.Add(cm);
+            }
+            
+        }
+
+        private void txtSearch_Enter(object sender, EventArgs e)
+        {
+        }
+
+        private void txtSearch_Leave(object sender, EventArgs e)
+        {
         }
 
         private void txtSearch_KeyUp(object sender, KeyEventArgs e)

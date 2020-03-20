@@ -16,7 +16,8 @@ namespace LSM.Forms
     public partial class frmAddItemSetup : Form
     {
         private int customer_id;
-    
+        private int item_id_;
+
         public frmAddItemSetup()
         {
             InitializeComponent();
@@ -68,7 +69,6 @@ namespace LSM.Forms
 
         private void numDiscount_ValueChanged(object sender, EventArgs e)
         {
-
             this.setFP();
         }
 
@@ -78,7 +78,7 @@ namespace LSM.Forms
 
             var rp_prep = new Models.ItemBind
             {
-                item_id = Models.GlobalSettings.Selection_Item_ID,
+                item_id = Models.GlobalSettings.Selection_II_ID,
                 customer_id = this.customer_id,
                 discount = (Double) numDiscount.Value,
                 selling_price = (Double) numSP.Value
