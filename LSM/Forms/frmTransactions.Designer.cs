@@ -78,6 +78,7 @@
             this.setAsAReturnedItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cntRT = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.bringBackToBillingListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button3 = new System.Windows.Forms.Button();
             this.bunifuCards3.SuspendLayout();
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBilling)).BeginInit();
@@ -99,6 +100,7 @@
             this.bunifuCards3.BorderRadius = 5;
             this.bunifuCards3.BottomSahddow = true;
             this.bunifuCards3.color = System.Drawing.Color.DodgerBlue;
+            this.bunifuCards3.Controls.Add(this.button3);
             this.bunifuCards3.Controls.Add(this.btnItem);
             this.bunifuCards3.Controls.Add(this.groupBox3);
             this.bunifuCards3.Controls.Add(this.bunifuSeparator3);
@@ -323,11 +325,11 @@
             this.btnPrintDR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPrintDR.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPrintDR.ForeColor = System.Drawing.Color.White;
-            this.btnPrintDR.Location = new System.Drawing.Point(256, 17);
+            this.btnPrintDR.Location = new System.Drawing.Point(211, 17);
             this.btnPrintDR.Name = "btnPrintDR";
-            this.btnPrintDR.Size = new System.Drawing.Size(109, 30);
+            this.btnPrintDR.Size = new System.Drawing.Size(154, 30);
             this.btnPrintDR.TabIndex = 33;
-            this.btnPrintDR.Text = "Print DR";
+            this.btnPrintDR.Text = "Print SOA";
             this.btnPrintDR.UseVisualStyleBackColor = false;
             this.btnPrintDR.Click += new System.EventHandler(this.btnPrintDR_Click);
             // 
@@ -655,6 +657,21 @@
             this.bringBackToBillingListToolStripMenuItem.Text = "Bring back to billing list";
             this.bringBackToBillingListToolStripMenuItem.Click += new System.EventHandler(this.bringBackToBillingListToolStripMenuItem_Click);
             // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.White;
+            this.button3.Location = new System.Drawing.Point(205, 10);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(154, 30);
+            this.button3.TabIndex = 34;
+            this.button3.Text = "Print DR";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
             // frmTransactions
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,5 +752,6 @@
         private System.Windows.Forms.ContextMenuStrip cntRT;
         private System.Windows.Forms.ToolStripMenuItem bringBackToBillingListToolStripMenuItem;
         private System.Windows.Forms.Button btnPrintDR;
+        private System.Windows.Forms.Button button3;
     }
 }

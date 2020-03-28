@@ -397,7 +397,6 @@ G:\LSM\LSM-SMS\LSM\bin\Debug\zh-CHT\Microsoft.ReportViewer.WinForms.resources.dl
 G:\LSM\LSM-SMS\LSM\bin\Debug\zh-HANS\Microsoft.ReportViewer.WinForms.resources.dll
 G:\LSM\LSM-SMS\LSM\bin\Debug\zh-HANT\Microsoft.ReportViewer.WinForms.resources.dll
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmEditItemSetup.resources
-G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
 F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.Common.resources.dll
 F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.DataVisualization.resources.dll
 F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.Design.resources.dll
@@ -405,3 +404,5 @@ F:\_lsm\LSM\bin\Debug\Microsoft.ReportViewer.WinForms.resources.dll
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmEditItemSetup.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmNotifications.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmNotifications.resources
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Models.Exportables.frmReportDR.resources
+G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache

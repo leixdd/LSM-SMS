@@ -316,10 +316,6 @@ namespace LSM.Forms
         {
         }
 
-        private void txtSearch_KeyUp(object sender, KeyEventArgs e)
-        {
-
-        }
     }
 
     class rDF

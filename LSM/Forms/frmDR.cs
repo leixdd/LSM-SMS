@@ -180,75 +180,94 @@ namespace LSM.Forms
 
         private void btnTransaction_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show(this, "Are you sure you want to save this transaction?", "Confirmation!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes) {
 
-            var dr_setup = new Models.DR_RPT
-            {
-                address = (txtAddress.Text.Equals("") ? "No Input" : txtAddress.Text),
-                datetime = dtpDate.Value.ToString("yyyy-MM-dd"),
-                d_style = txtDeliveryStyle.Text.Equals("") ? "No Input" : txtDeliveryStyle.Text,
-                deliverd_to = dto_id.ToString(),
-                datetime_to_be_paid = dtpToBePaid.Value.ToString("yyyy-MM-dd"),
-                dr_list = list_dr,
-                dr_no = btnDRNumber.Text,
-                terms = txtTerms.Value.ToString(),
-                tin = (txtTin.Text.Equals("") ? "No Input" : txtTin.Text),
-                updated_by = Models.GlobalSettings.CURRENT_USER.user_id.ToString(), //getting the current user
-                total_amount = total_amount_generate(list_dr),
-                check_empty = true
-            };
-
-            
-
-            if (list_dr.Count > 0)
-            {
-                DialogResult result = MessageBox.Show(this, "Do you want to setup the bank checks?", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-
-                if (result == DialogResult.Yes)
+                var dr_setup = new Models.DR_RPT
                 {
-                    MOP rp = new MOP();
-                    rp.setDRTrans(dr_setup);
-                    rp.ShowDialog();
+                    address = (txtAddress.Text.Equals("") ? "No Input" : txtAddress.Text),
+                    datetime = dtpDate.Value.ToString("yyyy-MM-dd"),
+                    d_style = txtDeliveryStyle.Text.Equals("") ? "No Input" : txtDeliveryStyle.Text,
+                    deliverd_to = dto_id.ToString(),
+                    datetime_to_be_paid = dtpToBePaid.Value.ToString("yyyy-MM-dd"),
+                    dr_list = list_dr,
+                    dr_no = btnDRNumber.Text,
+                    terms = txtTerms.Value.ToString(),
+                    tin = (txtTin.Text.Equals("") ? "No Input" : txtTin.Text),
+                    updated_by = Models.GlobalSettings.CURRENT_USER.user_id.ToString(), //getting the current user
+                    total_amount = total_amount_generate(list_dr),
+                    check_empty = true
+                };
 
+
+
+                if (list_dr.Count > 0)
+                {
+                    DialogResult result = MessageBox.Show(this, "Do you want to setup the bank checks?", "Wait!", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        MOP rp = new MOP();
+                        rp.setDRTrans(dr_setup);
+                        rp.ShowDialog();
+
+                    }
+                    else
+                    {
+
+                        HttpServer.Post(Routes.R_DR_SAVE, new StringContent(JsonConvert.SerializeObject(dr_setup), Encoding.UTF8, "application/json"), (passed, results) =>
+                        {
+                            if (passed)
+                            {
+
+                                if (!bool.Parse(results.success))
+                                {
+                                    frmError _error = new frmError();
+                                    var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
+                                    foreach (String control in data_.Keys)
+                                    {
+                                        _error.errorList1.addError(String.Join(",", data_[control]));
+                                    }
+
+                                    _error.Show();
+
+
+                                    return false;
+                                }
+
+                                frmSuccess success = new frmSuccess();
+                                success.setDesc(results.data.ToString());
+                                success.ShowDialog();
+
+                                DialogResult res = MessageBox.Show(this, "Do you want to print the delivery?", "Print DR?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+
+                                if (res == DialogResult.Yes)
+                                {
+                                    Models.Exportables.frmReportDR rpt = new Models.Exportables.frmReportDR();
+
+                                    rpt.setDS(list_dr,
+                                              txtDeliveredTo.Text,
+                                              dr_setup.address,
+                                              dr_setup.total_amount,
+                                              dr_setup.dr_no,
+                                              DateTime.Parse(dr_setup.datetime).ToLongDateString(),
+                                              DateTime.Parse(dr_setup.datetime_to_be_paid).ToLongDateString());
+
+                                    rpt.ShowDialog();
+                                }
+
+
+                            }
+                            return false;
+                        });
+
+                    }
                 }
                 else
                 {
-
-                    HttpServer.Post(Routes.R_DR_SAVE, new StringContent(JsonConvert.SerializeObject(dr_setup), Encoding.UTF8, "application/json"), (passed, results) =>
-                    {
-                        if (passed)
-                        {
-
-                            if (!bool.Parse(results.success))
-                            {
-                                frmError _error = new frmError();
-                                var data_ = JsonConvert.DeserializeObject<Dictionary<string, List<string>>>(results.data.ToString());
-                                foreach (String control in data_.Keys)
-                                {
-                                    _error.errorList1.addError(String.Join(",", data_[control]));
-                                }
-
-                                _error.Show();
-
-
-                                return false;
-                            }
-
-                            frmSuccess success = new frmSuccess();
-                            success.setDesc(results.data.ToString());
-                            success.ShowDialog();
-
-
-                        }
-                        return false;
-                    });
-
+                    MessageBox.Show(this, "Item List must have atleast 1 item to transact.", "Opps!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
-            else
-            {
-                MessageBox.Show(this, "Item List must have atleast 1 item to transact.", "Opps!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
 
+            }
             
         }
 

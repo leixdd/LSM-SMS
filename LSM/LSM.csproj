@@ -168,6 +168,12 @@
     <Compile Include="Forms\frmNotifications.Designer.cs">
       <DependentUpon>frmNotifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Exportables\frmReportDR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Exportables\frmReportDR.Designer.cs">
+      <DependentUpon>frmReportDR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Exportables\frmReport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -353,6 +359,9 @@
     <EmbeddedResource Include="Forms\frmNotifications.resx">
       <DependentUpon>frmNotifications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Models\Exportables\frmReportDR.resx">
+      <DependentUpon>frmReportDR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Models\Exportables\frmReport.resx">
       <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -392,6 +401,7 @@
     <EmbeddedResource Include="frmMain_Screen.resx">
       <DependentUpon>frmMain_Screen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Models\Exportables\DR.rdlc" />
     <EmbeddedResource Include="Models\Exportables\SOA.rdlc" />
     <EmbeddedResource Include="Models\Exportables\SOA2.rdlc" />
     <EmbeddedResource Include="User\Customer.resx">
@@ -426,6 +436,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\LSM.Models.DR.datasource" />
     <None Include="Properties\DataSources\LSM.Models.TABLE_BILLING_MODEL.datasource" />
     <None Include="Properties\DataSources\LSM.Models.TABLE_DELIVERIES_LIST.datasource" />
     <None Include="Properties\Settings.settings">

@@ -497,6 +497,37 @@ namespace LSM.Forms
                 rpt.ShowDialog();
             }
         }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (dgvDeliveries.Rows.Count > 0)
+            {
+                CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
+
+                Models.Exportables.frmReportDR rpt = new Models.Exportables.frmReportDR();
+
+                var dr_mod = new List<Models.DR>();
+
+                foreach (Models.TABLE_BILLING_MODEL tb in TABLE_MODEL_ITEM.get_list)
+                {
+                    dr_mod.Add(new Models.DR
+                    {
+                        Amount = tb.Amount.ToString(),
+                        Item = tb.Name,
+                        ItemID = (int) tb.ItemID,
+                        Quantity = tb.Quantity,
+                        Size = tb.Size,
+                    });
+                }
+
+                rpt.setDS(dr_mod, cm.customer_name, cm.company_address,
+                    Double.Parse(dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString()),
+                    dgvDeliveries.SelectedRows[0].Cells["DRNo"].Value.ToString(),
+                    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToLongDateString(),
+                    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString()).ToLongDateString());
+                rpt.ShowDialog();
+            }
+        }
         
     }
 }
