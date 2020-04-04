@@ -168,6 +168,12 @@
     <Compile Include="Forms\frmNotifications.Designer.cs">
       <DependentUpon>frmNotifications.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\Exportables\frmDRSIZE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\Exportables\frmDRSIZE.Designer.cs">
+      <DependentUpon>frmDRSIZE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Exportables\frmReportDR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -358,6 +364,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmNotifications.resx">
       <DependentUpon>frmNotifications.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\Exportables\DRInSize.rdlc" />
+    <EmbeddedResource Include="Models\Exportables\frmDRSIZE.resx">
+      <DependentUpon>frmDRSIZE.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\Exportables\frmReportDR.resx">
       <DependentUpon>frmReportDR.cs</DependentUpon>

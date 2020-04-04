@@ -504,7 +504,8 @@ namespace LSM.Forms
             {
                 CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
 
-                Models.Exportables.frmReportDR rpt = new Models.Exportables.frmReportDR();
+                Models.Exportables.frmDRSIZE rpt = new Models.Exportables.frmDRSIZE();
+                    //new Models.Exportables.frmReportDR();
 
                 var dr_mod = new List<Models.DR>();
 
@@ -520,11 +521,16 @@ namespace LSM.Forms
                     });
                 }
 
-                rpt.setDS(dr_mod, cm.customer_name, cm.company_address,
-                    Double.Parse(dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString()),
+                //rpt.setDS(dr_mod, cm.customer_name, cm.company_address,
+                //    Double.Parse(dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString()),
+                //    dgvDeliveries.SelectedRows[0].Cells["DRNo"].Value.ToString(),
+                //    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToLongDateString(),
+                //    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString()).ToLongDateString());
+                //rpt.ShowDialog();
+
+                rpt.setDS(dr_mod, cm.customer_name, 
                     dgvDeliveries.SelectedRows[0].Cells["DRNo"].Value.ToString(),
-                    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToLongDateString(),
-                    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString()).ToLongDateString());
+                    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToShortDateString());
                 rpt.ShowDialog();
             }
         }
