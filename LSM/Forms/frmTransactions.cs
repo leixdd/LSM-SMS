@@ -504,13 +504,17 @@ namespace LSM.Forms
             {
                 CUSTOMER_MODEL cm = dict_customer[(long)dgvDeliveries.SelectedRows[0].Cells["ID"].Value];
 
-                Models.Exportables.frmDRSIZE rpt = new Models.Exportables.frmDRSIZE();
-                    //new Models.Exportables.frmReportDR();
+                Models.Exportables.frmDRSIZE rpt = new Models.Exportables.frmDRSIZE(); //Version 2
+                    //new Models.Exportables.frmReportDR(); //Version 1
 
                 var dr_mod = new List<Models.DR>();
+                Double grand_total = 0;
 
                 foreach (Models.TABLE_BILLING_MODEL tb in TABLE_MODEL_ITEM.get_list)
                 {
+                    Double ta = ((Double) tb.Quantity * tb.Amount);
+                    grand_total += ta;
+
                     dr_mod.Add(new Models.DR
                     {
                         Amount = tb.Amount.ToString(),
@@ -518,9 +522,22 @@ namespace LSM.Forms
                         ItemID = (int) tb.ItemID,
                         Quantity = tb.Quantity,
                         Size = tb.Size,
+                        UnitPrice = ta
                     });
                 }
 
+                dr_mod.Add(new Models.DR
+                {
+                    Amount = "",
+                    Item = "",
+                    ItemID = 0,
+                    Quantity = 0,
+                    Size = "",
+                    UnitPrice = grand_total
+                });
+
+
+                //REPORTING VERSION 1
                 //rpt.setDS(dr_mod, cm.customer_name, cm.company_address,
                 //    Double.Parse(dgvDeliveries.SelectedRows[0].Cells["TotalAmount"].Value.ToString()),
                 //    dgvDeliveries.SelectedRows[0].Cells["DRNo"].Value.ToString(),
@@ -528,10 +545,22 @@ namespace LSM.Forms
                 //    DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["DueDate"].Value.ToString()).ToLongDateString());
                 //rpt.ShowDialog();
 
-                rpt.setDS(dr_mod, cm.customer_name, 
+                //REPORTING VERSION 2
+                rpt.setDS(dr_mod, cm.customer_name,
                     dgvDeliveries.SelectedRows[0].Cells["DRNo"].Value.ToString(),
                     DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToShortDateString());
                 rpt.ShowDialog();
+
+
+                //REPORTING VERSION 3
+                //var dr_excel = new Models.Exportables.DRExcel()
+                //{
+                //    CustomerAddress = cm.company_address,
+                //    CustomerName = cm.company_name,
+                //    DRDate = DateTime.Parse(dgvDeliveries.SelectedRows[0].Cells["Date"].Value.ToString()).ToShortDateString()
+                //};
+
+                //dr_excel.PrintUsingExcel();
             }
         }
         
