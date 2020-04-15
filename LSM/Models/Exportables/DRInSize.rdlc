@@ -18,7 +18,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.8898in</Top>
-        <Left>1.1in</Left>
+        <Left>0.625in</Left>
         <Height>0.25in</Height>
         <Width>2.97916in</Width>
         <Style>
@@ -47,7 +47,7 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>0.8898in</Top>
-        <Left>4.9in</Left>
+        <Left>4.425in</Left>
         <Height>0.25in</Height>
         <Width>1.23958in</Width>
         <ZIndex>1</ZIndex>
@@ -424,7 +424,7 @@
         </TablixRowHierarchy>
         <DataSetName>dr_dataset</DataSetName>
         <Top>2.08898in</Top>
-        <Left>0.4in</Left>
+        <Left>0.025in</Left>
         <Height>0.5in</Height>
         <Width>5.73958in</Width>
         <ZIndex>2</ZIndex>
@@ -443,7 +443,6 @@
     <PageHeight>8.26772in</PageHeight>
     <PageWidth>6.37795in</PageWidth>
     <RightMargin>0.15748in</RightMargin>
-    <TopMargin>1.81102in</TopMargin>
     <BottomMargin>0.31496in</BottomMargin>
     <ColumnSpacing>0.05118in</ColumnSpacing>
     <Style />
