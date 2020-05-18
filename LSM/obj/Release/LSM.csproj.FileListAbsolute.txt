@@ -351,3 +351,4 @@ G:\LSM\LSM-SMS\LSM\bin\Release\Spire.Common.xml
 G:\LSM\LSM-SMS\LSM\bin\Release\Spire.License.xml
 G:\LSM\LSM-SMS\LSM\bin\Release\Spire.Pdf.xml
 G:\LSM\LSM-SMS\LSM\bin\Release\Spire.XLS.xml
+G:\LSM\LSM-SMS\LSM\obj\Release\LSM.csprojResolveAssemblyReference.cache

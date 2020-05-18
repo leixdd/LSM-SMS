@@ -405,7 +405,6 @@ F:\_lsm\LSM\obj\Debug\LSM.Forms.frmEditItemSetup.resources
 F:\_lsm\LSM\obj\Debug\LSM.Forms.frmNotifications.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Forms.frmNotifications.resources
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Models.Exportables.frmReportDR.resources
-G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.csprojResolveAssemblyReference.cache
 G:\LSM\LSM-SMS\LSM\obj\Debug\LSM.Models.Exportables.frmDRSIZE.resources
 G:\LSM\LSM-SMS\LSM\bin\Debug\DRTemplate.xlsx
 G:\LSM\LSM-SMS\LSM\bin\Debug\EPPlus.dll
